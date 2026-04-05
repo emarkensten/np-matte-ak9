@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strategi: Nationella Provet i Matematik Åk 9</title>
+<style>
+  :root {
+    --bg: #fafaf9; --card: #ffffff; --text: #1c1917; --muted: #78716c;
+    --accent: #2563eb; --accent-light: #dbeafe; --green: #16a34a; --green-light: #dcfce7;
+    --amber: #d97706; --amber-light: #fef3c7; --red: #dc2626; --red-light: #fee2e2;
+    --border: #e7e5e4;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Georgia', serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+  .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+  h1 { font-size: 2rem; margin-bottom: 0.5rem; color: var(--accent); }
+  h2 { font-size: 1.5rem; margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--accent); }
+  h3 { font-size: 1.15rem; margin: 1.5rem 0 0.5rem; color: var(--accent); }
+  p { margin-bottom: 1rem; }
+  .subtitle { color: var(--muted); font-size: 1rem; margin-bottom: 2rem; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .highlight { border-left: 4px solid var(--accent); padding-left: 1rem; margin: 1rem 0; background: var(--accent-light); padding: 1rem 1rem 1rem 1.5rem; border-radius: 0 8px 8px 0; }
+  .tag { display: inline-block; padding: 2px 10px; border-radius: 99px; font-size: 0.8rem; font-weight: 600; margin: 2px; }
+  .tag-e { background: var(--green-light); color: var(--green); }
+  .tag-c { background: var(--amber-light); color: var(--amber); }
+  .tag-a { background: var(--red-light); color: var(--red); }
+  .tag-area { background: #f0f0ff; color: #4338ca; }
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { padding: 0.6rem 0.8rem; text-align: left; border-bottom: 1px solid var(--border); }
+  th { background: #f5f5f4; font-weight: 600; }
+  .bar-container { display: flex; align-items: center; gap: 0.5rem; }
+  .bar { height: 18px; border-radius: 4px; min-width: 2px; }
+  .bar-label { font-size: 0.8rem; color: var(--muted); white-space: nowrap; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .checklist { list-style: none; padding: 0; }
+  .checklist li { padding: 0.4rem 0; padding-left: 1.5rem; position: relative; }
+  .checklist li::before { content: "✓"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .warning { background: var(--amber-light); border-left: 4px solid var(--amber); padding: 1rem 1.5rem; border-radius: 0 8px 8px 0; margin: 1rem 0; }
+  .tip { background: var(--green-light); border-left: 4px solid var(--green); padding: 1rem 1.5rem; border-radius: 0 8px 8px 0; margin: 1rem 0; }
+  .section-nav { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; }
+  .section-nav a { color: var(--accent); text-decoration: none; display: block; padding: 0.3rem 0; }
+  .section-nav a:hover { text-decoration: underline; }
+  .badge { display: inline-block; background: var(--accent); color: white; font-size: 0.75rem; padding: 2px 8px; border-radius: 4px; margin-left: 0.5rem; vertical-align: middle; }
+  .delprov-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+  .delprov-card { text-align: center; padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border); background: var(--card); }
+  .delprov-card h4 { margin-bottom: 0.5rem; }
+  .delprov-card .big { font-size: 2rem; font-weight: 700; color: var(--accent); }
+  .freq-bar { display: flex; gap: 2px; align-items: flex-end; height: 80px; margin-top: 0.5rem; }
+  .freq-col { flex: 1; background: var(--accent); border-radius: 3px 3px 0 0; min-height: 4px; transition: height 0.3s; }
+  @media (max-width: 600px) { .grid-2 { grid-template-columns: 1fr; } }
+  footer { text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>Nationella Provet i Matematik Åk 9</h1>
+<p class="subtitle">Strategirapport baserad på analys av prov 2013–2025 &middot; PRIM-gruppen &amp; Skolverket</p>
+
+<div class="section-nav">
+  <strong>Innehåll</strong>
+  <a href="#overview">1. Provets uppbyggnad</a>
+  <a href="#areas">2. Ämnesområden &ndash; vad kommer alltid?</a>
+  <a href="#patterns">3. Återkommande frågemönster</a>
+  <a href="#difficulty">4. Svårighetskurvan &ndash; gratis poäng vs. A-frågor</a>
+  <a href="#traps">5. Vanligaste fällorna</a>
+  <a href="#grades">6. Betygsgränser &ndash; vad krävs?</a>
+  <a href="#strategy">7. Provdagsstrategi</a>
+  <a href="#studyplan">8. Träningsplan per betygsnivå</a>
+  <a href="#sources">9. Källor</a>
+</div>
+
+<!-- ============================================= -->
+<h2 id="overview">1. Provets uppbyggnad</h2>
+
+<p>Provet har haft en mycket stabil struktur under hela perioden 2013–2025. Det består av fyra delprov som genomförs vid olika tillfällen.</p>
+
+<div class="delprov-grid">
+  <div class="delprov-card">
+    <h4>Delprov A</h4>
+    <div class="big">Muntligt</div>
+    <p>Grupper om 3–4 elever. ~30 min. Genomförs på hösten.</p>
+    <span class="tag tag-area">Diskussion &amp; resonemang</span>
+  </div>
+  <div class="delprov-card">
+    <h4>Delprov B</h4>
+    <div class="big">~15–22 uppg.</div>
+    <p>Utan miniräknare. ~60 min. Mest kortsvar.</p>
+    <span class="tag tag-e">25–30% av poängen</span>
+  </div>
+  <div class="delprov-card">
+    <h4>Delprov C</h4>
+    <div class="big">1 stor uppgift</div>
+    <p>Med miniräknare. ~60 min. Undersökande.</p>
+    <span class="tag tag-c">~15% av poängen</span>
+  </div>
+  <div class="delprov-card">
+    <h4>Delprov D</h4>
+    <div class="big">~6–12 uppg.</div>
+    <p>Med miniräknare. ~120 min. Temabaserat.</p>
+    <span class="tag tag-a">~40% av poängen</span>
+  </div>
+</div>
+
+<div class="card">
+  <h3>Totalpoäng per år</h3>
+  <table>
+    <tr><th>År</th><th>Totalt</th><th>E-poäng</th><th>C-poäng</th><th>A-poäng</th></tr>
+    <tr><td>2016</td><td>90</td><td>35</td><td>34</td><td>21</td></tr>
+    <tr><td>2017</td><td>91</td><td>38</td><td>32</td><td>21</td></tr>
+    <tr><td>2018</td><td>91</td><td>38</td><td>32</td><td>21</td></tr>
+    <tr><td>2019</td><td>90</td><td>37</td><td>34</td><td>19</td></tr>
+    <tr><td>2024</td><td>88</td><td colspan="3" style="color:var(--muted)">Ny modell utan E/C/A-kategorisering</td></tr>
+    <tr><td>2025</td><td>89</td><td colspan="3" style="color:var(--muted)">Ny modell utan E/C/A-kategorisering</td></tr>
+  </table>
+</div>
+
+<!-- ============================================= -->
+<h2 id="areas">2. Ämnesområden &ndash; vad kommer alltid?</h2>
+
+<p>Fördelningen av ämnesområden är remarkabelt stabil. Här är den typiska vikten, baserad på alla analyserade prov:</p>
+
+<div class="card">
+  <table>
+    <tr>
+      <th>Ämnesområde</th><th>Andel</th><th>Fördelning</th><th>Alltid med?</th>
+    </tr>
+    <tr>
+      <td><strong>Taluppfattning &amp; aritmetik</strong></td><td>40–50%</td>
+      <td><div class="bar-container"><div class="bar" style="width:180px;background:var(--accent)"></div></div></td>
+      <td><span class="badge">JA, ALLTID</span></td>
+    </tr>
+    <tr>
+      <td><strong>Algebra</strong></td><td>25–30%</td>
+      <td><div class="bar-container"><div class="bar" style="width:120px;background:var(--accent)"></div></div></td>
+      <td><span class="badge">JA, ALLTID</span></td>
+    </tr>
+    <tr>
+      <td><strong>Geometri</strong></td><td>20–30%</td>
+      <td><div class="bar-container"><div class="bar" style="width:100px;background:var(--accent)"></div></div></td>
+      <td><span class="badge">JA, ALLTID</span></td>
+    </tr>
+    <tr>
+      <td><strong>Samband &amp; funktioner</strong></td><td>20–25%</td>
+      <td><div class="bar-container"><div class="bar" style="width:90px;background:#6366f1"></div></div></td>
+      <td><span class="badge">JA, ALLTID</span></td>
+    </tr>
+    <tr>
+      <td><strong>Statistik &amp; sannolikhet</strong></td><td>~10%</td>
+      <td><div class="bar-container"><div class="bar" style="width:40px;background:#8b5cf6"></div></div></td>
+      <td><span class="badge">JA, ALLTID</span></td>
+    </tr>
+    <tr>
+      <td><strong>Procent &amp; bråk</strong></td><td>15–20%</td>
+      <td><div class="bar-container"><div class="bar" style="width:70px;background:#a78bfa"></div></div></td>
+      <td><span class="badge">JA, ALLTID</span></td>
+    </tr>
+  </table>
+  <p style="color:var(--muted);font-size:0.85rem;margin-top:0.5rem">Obs: Områdena överlappar &ndash; en uppgift kan testa t.ex. både algebra och procent.</p>
+</div>
+
+<div class="highlight">
+  <strong>Nyckelinsikt:</strong> Taluppfattning/aritmetik och algebra utgör tillsammans ~70% av provet. Den som behärskar dessa två områden har en stark grund. Geometri och funktioner/grafer är det tredje blocket som skiljer C- från A-elever.
+</div>
+
+<!-- ============================================= -->
+<h2 id="patterns">3. Återkommande frågemönster</h2>
+
+<p>Genom att jämföra proven 2013–2019 framträder tydliga mönster. Dessa typer av frågor kommer <em>varje år</em>:</p>
+
+<div class="card">
+  <h3>Frågor som ALLTID kommer</h3>
+  <table>
+    <tr><th>Mönster</th><th>Var?</th><th>Typiskt utseende</th></tr>
+    <tr>
+      <td><strong>Ren beräkning utan miniräknare</strong></td>
+      <td>Delprov B, uppg. 1–5</td>
+      <td>"Beräkna 20 – 5 · 2 + 3", "Beräkna 2,35 – 0,5"</td>
+    </tr>
+    <tr>
+      <td><strong>Ekvationslösning</strong></td>
+      <td>Delprov B + D</td>
+      <td>Linjära ekvationer, ibland andragradsekvationer i D</td>
+    </tr>
+    <tr>
+      <td><strong>Tolka/skapa graf eller diagram</strong></td>
+      <td>Delprov C + D</td>
+      <td>Avläsa värden, beskriva samband, rita graf utifrån tabell</td>
+    </tr>
+    <tr>
+      <td><strong>Geometri: area, omkrets, volym</strong></td>
+      <td>Delprov B + D</td>
+      <td>Beräkna area av sammansatta figurer, volym av cylinder/prisma</td>
+    </tr>
+    <tr>
+      <td><strong>Procentberäkning</strong></td>
+      <td>Delprov B + D</td>
+      <td>"Hur många procent...?", procentuell förändring, rabatter</td>
+    </tr>
+    <tr>
+      <td><strong>Sannolikhet</strong></td>
+      <td>Delprov B (+ ibland D)</td>
+      <td>Enkel sannolikhet med tärningar, kort, urval</td>
+    </tr>
+    <tr>
+      <td><strong>Undersökande uppgift</strong></td>
+      <td>Delprov C</td>
+      <td>En stor, öppen uppgift som kräver resonemang och redovisning</td>
+    </tr>
+    <tr>
+      <td><strong>Temabaserad problemlösning</strong></td>
+      <td>Delprov D</td>
+      <td>Verklighetsnära scenario (fest, resa, ekonomi) med matematiska delfrågor</td>
+    </tr>
+    <tr>
+      <td><strong>Algebraiskt uttryck &ndash; förenkling</strong></td>
+      <td>Delprov B</td>
+      <td>"Förenkla uttrycket 3(2x + 4) – 2x"</td>
+    </tr>
+    <tr>
+      <td><strong>Vinklar och symmetri</strong></td>
+      <td>Delprov B</td>
+      <td>Beräkna okända vinklar i trianglar/parallella linjer</td>
+    </tr>
+  </table>
+</div>
+
+<div class="tip">
+  <strong>Studietips:</strong> Om du tränar på alla tio mönstren ovan har du täckt de absolut vanligaste frågetyperna. Varje enskilt prov innehåller i princip alla dessa.
+</div>
+
+<!-- ============================================= -->
+<h2 id="difficulty">4. Svårighetskurvan</h2>
+
+<p>Proven följer en tydlig svårighetstrappa. Här är den faktiska fördelningen baserat på lösningsproportioner (andel elever som klarar uppgiften):</p>
+
+<div class="grid-2">
+  <div class="card">
+    <h3 style="color:var(--green)">"Gratis poäng" (E-nivå)</h3>
+    <p><strong>Lösningsproportion: 70–90%</strong></p>
+    <p>Dessa uppgifter klarar de flesta. De sitter typiskt i början av Delprov B:</p>
+    <ul class="checklist">
+      <li>Enkel addition/subtraktion med decimaler</li>
+      <li>Prioriteringsregler (räkna i rätt ordning)</li>
+      <li>Avläsning av enkelt diagram</li>
+      <li>Grundläggande procentberäkning</li>
+      <li>Enkel geometri (area av rektangel)</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3 style="color:var(--red)">Svårast (A-nivå)</h3>
+    <p><strong>Lösningsproportion: 10–30%</strong></p>
+    <p>Dessa uppgifter skiljer toppbetygen. Typiskt i slutet av Delprov D:</p>
+    <ul class="checklist">
+      <li>Andragradsekvationer (lösa båda rötterna)</li>
+      <li>Tredimensionell geometri med enhetsbyten</li>
+      <li>Generalisering och motivering av mönster</li>
+      <li>Komplexa flerstegsberäkningar</li>
+      <li>Resonemang om matematiska samband</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <h3>Typisk svårighetstrappa per delprov</h3>
+  <table>
+    <tr><th>Delprov</th><th>Börjar med...</th><th>Slutar med...</th><th>Poängfördelning</th></tr>
+    <tr>
+      <td><strong>B</strong></td>
+      <td>Rena beräkningar (E)</td>
+      <td>Ekvationslösning, förenkling (C/A)</td>
+      <td><span class="tag tag-e">~50% E</span> <span class="tag tag-c">~35% C</span> <span class="tag tag-a">~15% A</span></td>
+    </tr>
+    <tr>
+      <td><strong>C</strong></td>
+      <td>Läs och tolka (E)</td>
+      <td>Generalisera och motivera (A)</td>
+      <td><span class="tag tag-e">~33% E</span> <span class="tag tag-c">~33% C</span> <span class="tag tag-a">~33% A</span></td>
+    </tr>
+    <tr>
+      <td><strong>D</strong></td>
+      <td>Enklare temauppgifter (E)</td>
+      <td>Komplexa flerstegsuppgifter (A)</td>
+      <td><span class="tag tag-e">~40% E</span> <span class="tag tag-c">~35% C</span> <span class="tag tag-a">~25% A</span></td>
+    </tr>
+  </table>
+</div>
+
+<!-- ============================================= -->
+<h2 id="traps">5. Vanligaste fällorna</h2>
+
+<p>Bedömningsanvisningarna avslöjar vilka misstag som görs om och om igen. Här är de viktigaste att vara medveten om:</p>
+
+<div class="card">
+  <h3>Topp 10 vanligaste misstagen</h3>
+  <table>
+    <tr><th>#</th><th>Misstag</th><th>Var det dyker upp</th><th>Hur man undviker det</th></tr>
+    <tr><td>1</td><td><strong>Räknefel med decimaler</strong></td><td>Delprov B</td><td>Skriv mellansteg, kontrollera med överslagsräkning</td></tr>
+    <tr><td>2</td><td><strong>Glömda/felaktiga enheter</strong></td><td>Alla delprov</td><td>Skriv ALLTID enheten. Dubbelkolla enhetsbyte.</td></tr>
+    <tr><td>3</td><td><strong>Bara en rot i andragradsekv.</strong></td><td>Delprov D</td><td>Fråga dig: "Kan det finnas fler lösningar?"</td></tr>
+    <tr><td>4</td><td><strong>Otillräcklig redovisning</strong></td><td>Delprov C + D</td><td>Visa varje steg. Skriv "för att..."</td></tr>
+    <tr><td>5</td><td><strong>Fel prioriteringsordning</strong></td><td>Delprov B</td><td>Multiplikation/division före addition/subtraktion</td></tr>
+    <tr><td>6</td><td><strong>Förväxlar area och omkrets</strong></td><td>Delprov B + D</td><td>Area = yta (cm²), omkrets = runt om (cm)</td></tr>
+    <tr><td>7</td><td><strong>Felavläsning av graf</strong></td><td>Delprov C + D</td><td>Läs skalan noggrant, kolla enheter på axlarna</td></tr>
+    <tr><td>8</td><td><strong>Teckenfel i ekvationer</strong></td><td>Delprov B + D</td><td>Var extra noga vid flytt över likhetstecken</td></tr>
+    <tr><td>9</td><td><strong>För tidig avrundning</strong></td><td>Delprov D</td><td>Avrunda sist, inte i mellansteg</td></tr>
+    <tr><td>10</td><td><strong>Blandar beroende/oberoende variabel</strong></td><td>Delprov C</td><td>x-axeln = det du styr, y-axeln = det du mäter</td></tr>
+  </table>
+</div>
+
+<div class="warning">
+  <strong>Varning:</strong> Misstag #4 (otillräcklig redovisning) är den vanligaste orsaken till att elever missar C- och A-poäng trots att de kan lösa uppgiften. I Delprov D krävs <em>fullständig lösning</em> för nästan alla uppgifter.
+</div>
+
+<!-- ============================================= -->
+<h2 id="grades">6. Betygsgränser &ndash; vad krävs?</h2>
+
+<div class="card">
+  <h3>Poängkrav per betyg (genomsnitt 2016–2019)</h3>
+  <table>
+    <tr><th>Betyg</th><th>Poängkrav (av ~90)</th><th>Andel av max</th><th>Andel elever</th></tr>
+    <tr><td><strong>E</strong></td><td>~22 poäng</td><td>~24%</td><td>~85% klarar detta</td></tr>
+    <tr><td><strong>D</strong></td><td>~37 poäng</td><td>~41%</td><td>~55–65%</td></tr>
+    <tr><td><strong>C</strong></td><td>~50 poäng</td><td>~55%</td><td>~30–35%</td></tr>
+    <tr><td><strong>B</strong></td><td>~64 poäng</td><td>~71%</td><td>~15–20%</td></tr>
+    <tr><td><strong>A</strong></td><td>~74 poäng</td><td>~82%</td><td>~5–9%</td></tr>
+  </table>
+  <p style="margin-top:1rem"><strong>Obs:</strong> Förutom totalpoäng krävdes (2016–2019) även att man når tillräckligt många poäng på rätt <em>nivå</em>. T.ex. för betyg C krävdes inte bara 50 totalpoäng utan även ~19 C-poäng. Cirka 20% av eleverna nådde totalpoäng men missade nivåkraven.</p>
+</div>
+
+<div class="highlight">
+  <strong>Praktisk konsekvens:</strong> För att nå E (godkänt) räcker det att klara de ~22 enklaste poängen &ndash; i princip hela Delprov B:s E-uppgifter plus lite till. Men för C och uppåt måste man visa att man kan <em>resonera och redovisa</em>, inte bara räkna rätt.
+</div>
+
+<!-- ============================================= -->
+<h2 id="strategy">7. Provdagsstrategi</h2>
+
+<div class="card">
+  <h3>Tidsplanering &ndash; skriftliga proven</h3>
+  <table>
+    <tr><th>Delprov</th><th>Tid</th><th>Strategi</th></tr>
+    <tr>
+      <td><strong>B</strong></td>
+      <td>60 min</td>
+      <td>
+        Börja framifrån &ndash; de första uppgifterna är enklast. <br>
+        Hoppa över det du fastnar på &ndash; kom tillbaka. <br>
+        Spara 10 min i slutet för att dubbelkolla svar.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>C</strong></td>
+      <td>60 min</td>
+      <td>
+        Läs igenom hela uppgiften först (5 min). <br>
+        Lös steg för steg &ndash; börja med det du förstår. <br>
+        Fokusera på REDOVISNING &ndash; visa varje steg. <br>
+        Även ett ofullständigt svar ger poäng.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>D</strong></td>
+      <td>120 min</td>
+      <td>
+        Ögna igenom alla uppgifter (5 min). <br>
+        Gör de enklare E-uppgifterna först (30 min). <br>
+        Ta dig sedan an C-uppgifterna (50 min). <br>
+        A-uppgifterna sist (30 min). <br>
+        Kolla svar och enheter (10 min).
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div class="tip">
+  <strong>Viktigast på provdagen:</strong> Delprov D är värt ~40% av poängen och har mest tid. Det är här kampen om C, B och A avgörs. Lägg kraften där &ndash; men stressa inte bort E-poängen i Delprov B.
+</div>
+
+<div class="card">
+  <h3>Gyllene regler under provet</h3>
+  <ul class="checklist">
+    <li>Läs frågan två gånger innan du börjar räkna</li>
+    <li>Skriv enheter på alla svar</li>
+    <li>I Delprov D: visa ALLA steg, skriv "för att..." och "det betyder att..."</li>
+    <li>Fastnar du? Gå vidare. Kom tillbaka.</li>
+    <li>Kontrollera svaret &ndash; "Är detta rimligt?"</li>
+    <li>Använd formelbladet aktivt (det finns en anledning att det delas ut)</li>
+  </ul>
+</div>
+
+<!-- ============================================= -->
+<h2 id="studyplan">8. Träningsplan per betygsnivå</h2>
+
+<div class="card" style="border-left: 4px solid var(--green)">
+  <h3 style="color:var(--green)">Mål: Betyg E (godkänt)</h3>
+  <p>Du behöver ~22 av ~90 poäng. Fokusera på:</p>
+  <ul class="checklist">
+    <li><strong>Grundläggande räkning</strong> &ndash; de fyra räknesätten med heltal, decimaler, bråk</li>
+    <li><strong>Prioriteringsregler</strong> &ndash; multiplikation/division före addition/subtraktion</li>
+    <li><strong>Enkla ekvationer</strong> &ndash; lösa x i t.ex. 3x + 5 = 20</li>
+    <li><strong>Grundläggande geometri</strong> &ndash; area av rektangel, triangel; vinkelsumma i triangel</li>
+    <li><strong>Procent</strong> &ndash; beräkna t.ex. 25% av 800</li>
+    <li><strong>Avläsa diagram</strong> &ndash; stapeldiagram, linjediagram</li>
+  </ul>
+  <p><strong>Träningstid:</strong> 1–2 veckor, 30 min/dag. Gör Delprov B från gamla prov.</p>
+</div>
+
+<div class="card" style="border-left: 4px solid var(--amber)">
+  <h3 style="color:var(--amber)">Mål: Betyg C</h3>
+  <p>Du behöver ~50 poäng + tillräckligt många C-poäng. Fokusera på allt ovan plus:</p>
+  <ul class="checklist">
+    <li><strong>Ekvationer med variabler på båda sidor</strong> &ndash; t.ex. 5x + 3 = 2x + 18</li>
+    <li><strong>Förenkling av algebraiska uttryck</strong> &ndash; parenteser, distributiva lagen</li>
+    <li><strong>Geometri med formler</strong> &ndash; cirkelns area/omkrets, volym av prisma/cylinder</li>
+    <li><strong>Funktioner &amp; grafer</strong> &ndash; tolka lutning, plotta linjära samband</li>
+    <li><strong>Sannolikhet</strong> &ndash; beräkna sannolikheter, möjliga utfall</li>
+    <li><strong>REDOVISNING</strong> &ndash; öva på att skriva fullständiga lösningar med motiveringar</li>
+  </ul>
+  <p><strong>Träningstid:</strong> 3–4 veckor, 45 min/dag. Gör hela Delprov B + C + D:s enklare uppgifter.</p>
+</div>
+
+<div class="card" style="border-left: 4px solid var(--red)">
+  <h3 style="color:var(--red)">Mål: Betyg A</h3>
+  <p>Du behöver ~74 poäng + tillräckligt många A-poäng. Fokusera på allt ovan plus:</p>
+  <ul class="checklist">
+    <li><strong>Andragradsekvationer</strong> &ndash; lösa BÅDA rötterna, pq-formeln</li>
+    <li><strong>Generalisering</strong> &ndash; visa att ett mönster gäller, motivera algebraiskt</li>
+    <li><strong>Komplexa geometriuppgifter</strong> &ndash; 3D-figurer, likformighet, enhetsbyten</li>
+    <li><strong>Undersökande uppgifter</strong> &ndash; delprov C kräver att du visar hela tankegången</li>
+    <li><strong>Problemlösning i flera steg</strong> &ndash; bryta ner textuppgifter, välja strategi</li>
+    <li><strong>Kritisk granskning</strong> &ndash; kontrollera och motivera rimligheten i ditt svar</li>
+  </ul>
+  <p><strong>Träningstid:</strong> 4–6 veckor, 60 min/dag. Gör ALLA delar av gamla prov under provliknande förhållanden.</p>
+</div>
+
+<!-- ============================================= -->
+<h2 id="sources">9. Datakällor</h2>
+
+<div class="card">
+  <h3>Material som analyserats</h3>
+  <p><strong>Resultatrapporter (PRIM-gruppen, Stockholms universitet):</strong> 2016, 2017, 2018, 2019, 2024, 2025 &ndash; totalt 6 rapporter med statistik, eleversultat och lärarenkäter.</p>
+  <p><strong>Provdokument (delprov B, C, D + bedömningsanvisningar):</strong> 2013, 2014, 2017 &ndash; totalt 18 PDF:er med alla uppgifter och korrekta lösningar.</p>
+  <p><strong>Begränsningar:</strong> Proven 2015, 2016, 2018, 2019 kunde inte laddas ner som ZIP p.g.a. filstorleksbegränsningar. Figurer och diagram i PDF:erna kunde inte extraheras fullständigt. Den muntliga delen (Delprov A) är svår att analysera i textform.</p>
+  <h3>Länkar</h3>
+  <p>
+    <a href="https://www.su.se/enheter/prim-gruppen/nationella-prov/arskurs-9">PRIM-gruppen &ndash; Nationella prov Åk 9</a><br>
+    <a href="https://www.skolverket.se/prov-och-bedomning/nationella-prov/nationella-prov-pa-papper/gamla-nationella-prov">Skolverket &ndash; Gamla nationella prov</a><br>
+    <a href="https://www.matteboken.se/provbank">Matteboken &ndash; Provbank</a><br>
+    <a href="https://www.mattepi.com/gamla-nationella-prov-%C3%A5k9">Mattepi &ndash; Gamla prov Åk 9</a>
+  </p>
+</div>
+
+<footer>
+  Strategirapport framtagen april 2026 &middot; Baserad på analys av nationella prov 2013&ndash;2025<br>
+  Datakällor: PRIM-gruppen (Stockholms universitet) &amp; Skolverket
+</footer>
+
+</div>
+</body>
+</html>

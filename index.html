@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nationella Provet Matematik Åk 9 - Ultimat Studieverktyg</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+            background-color: #f8f9fa;
+            color: #1a1a1a;
+        }
+
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header .countdown {
+            font-size: 1.3em;
+            margin-top: 10px;
+            background: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .header-controls {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .theme-toggle {
+            background: rgba(255,255,255,0.2);
+            border: 2px solid white;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s;
+        }
+
+        .theme-toggle:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .tab-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0;
+        }
+
+        .tab-button {
+            padding: 15px 25px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            color: #666;
+            border-bottom: 4px solid transparent;
+            transition: all 0.3s;
+            position: relative;
+            bottom: -3px;
+        }
+
+        .tab-button:hover {
+            color: #667eea;
+        }
+
+        .tab-button.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+        }
+
+        body.dark-mode .tab-button {
+            color: #aaa;
+        }
+
+        body.dark-mode .tab-button:hover {
+            color: #9fa5ff;
+        }
+
+        body.dark-mode .tab-button.active {
+            color: #9fa5ff;
+            border-bottom-color: #9fa5ff;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        body.dark-mode .card {
+            background: #2a2a2a;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #667eea;
+            font-size: 1.8em;
+        }
+
+        body.dark-mode .card h2 {
+            color: #9fa5ff;
+        }
+
+        .card h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #764ba2;
+            font-size: 1.3em;
+        }
+
+        body.dark-mode .card h3 {
+            color: #b89eff;
+        }
+
+        .level-e {
+            border-left: 5px solid #10b981;
+            background: linear-gradient(to right, rgba(16,185,129,0.05), transparent);
+        }
+
+        .level-c {
+            border-left: 5px solid #f59e0b;
+            background: linear-gradient(to right, rgba(245,158,11,0.05), transparent);
+        }
+
+        .level-a {
+            border-left: 5px solid #ef4444;
+            background: linear-gradient(to right, rgba(239,68,68,0.05), transparent);
+        }
+
+        body.dark-mode .level-e {
+            background: linear-gradient(to right, rgba(16,185,129,0.15), transparent);
+        }
+
+        body.dark-mode .level-c {
+            background: linear-gradient(to right, rgba(245,158,11,0.15), transparent);
+        }
+
+        body.dark-mode .level-a {
+            background: linear-gradient(to right, rgba(239,68,68,0.15), transparent);
+        }
+
+        .level-badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-right: 10px;
+            margin-bottom: 5px;
+        }
+
+        .badge-e {
+            background: #10b981;
+            color: white;
+        }
+
+        .badge-c {
+            background: #f59e0b;
+            color: white;
+        }
+
+        .badge-a {
+            background: #ef4444;
+            color: white;
+        }
+
+        .badge-topic {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            background: #667eea;
+            color: white;
+            margin-right: 8px;
+            margin-bottom: 5px;
+        }
+
+        .accordion-header {
+            cursor: pointer;
+            padding: 15px;
+            background: #f0f0f0;
+            border-radius: 8px;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+            user-select: none;
+        }
+
+        body.dark-mode .accordion-header {
+            background: #333;
+        }
+
+        .accordion-header:hover {
+            background: #e0e0e0;
+        }
+
+        body.dark-mode .accordion-header:hover {
+            background: #444;
+        }
+
+        .accordion-icon {
+            transition: transform 0.3s;
+        }
+
+        .accordion-icon.open {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 15px;
+        }
+
+        .accordion-content.open {
+            max-height: 2000px;
+            padding: 15px;
+        }
+
+        .question-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 5px solid #667eea;
+        }
+
+        body.dark-mode .question-card {
+            background: #2a2a2a;
+        }
+
+        .question-text {
+            font-size: 1.05em;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .reveal-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .reveal-btn:hover {
+            background: #764ba2;
+        }
+
+        .hidden-answer {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background: #f0f0f0;
+            border-radius: 8px;
+            border-left: 4px solid #10b981;
+        }
+
+        body.dark-mode .hidden-answer {
+            background: #333;
+        }
+
+        .hidden-answer.visible {
+            display: block;
+        }
+
+        .hidden-answer h4 {
+            color: #10b981;
+            margin-bottom: 10px;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .good-answer {
+            border: 2px solid #10b981;
+            padding: 15px;
+            border-radius: 8px;
+            background: rgba(16,185,129,0.05);
+        }
+
+        body.dark-mode .good-answer {
+            background: rgba(16,185,129,0.15);
+        }
+
+        .bad-answer {
+            border: 2px solid #ef4444;
+            padding: 15px;
+            border-radius: 8px;
+            background: rgba(239,68,68,0.05);
+        }
+
+        body.dark-mode .bad-answer {
+            background: rgba(239,68,68,0.15);
+        }
+
+        .good-answer h4 {
+            color: #10b981;
+            margin-bottom: 10px;
+        }
+
+        .bad-answer h4 {
+            color: #ef4444;
+            margin-bottom: 10px;
+        }
+
+        .quiz-mode {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        body.dark-mode .quiz-mode {
+            background: #2a2a2a;
+        }
+
+        .quiz-controls {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #764ba2;
+        }
+
+        .btn-secondary {
+            background: #f59e0b;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #d97706;
+        }
+
+        .btn-success {
+            background: #10b981;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #059669;
+        }
+
+        .btn-danger {
+            background: #ef4444;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #dc2626;
+        }
+
+        .study-plan-day {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        body.dark-mode .study-plan-day {
+            background: #2a2a2a;
+        }
+
+        .study-plan-day:hover {
+            transform: translateX(5px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .study-plan-day.today {
+            border-left-color: #10b981;
+            background: rgba(16,185,129,0.05);
+        }
+
+        body.dark-mode .study-plan-day.today {
+            background: rgba(16,185,129,0.15);
+        }
+
+        .day-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .day-date {
+            font-weight: 600;
+            color: #667eea;
+            font-size: 1.1em;
+        }
+
+        .day-duration {
+            background: #f59e0b;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+
+        .day-tasks {
+            color: #666;
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+
+        body.dark-mode .day-tasks {
+            color: #aaa;
+        }
+
+        .formula-card {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            border-left: 4px solid #667eea;
+            margin-bottom: 15px;
+        }
+
+        body.dark-mode .formula-card {
+            background: #2a2a2a;
+        }
+
+        .formula-name {
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .formula-text {
+            font-family: 'Courier New', monospace;
+            background: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        body.dark-mode .formula-text {
+            background: #333;
+        }
+
+        .tips-section {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        body.dark-mode .tips-section {
+            background: rgba(245,158,11,0.1);
+        }
+
+        .tips-section h4 {
+            color: #b45309;
+            margin-bottom: 8px;
+        }
+
+        .tips-section li {
+            margin-left: 20px;
+            margin-bottom: 8px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background: #e5e7eb;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        body.dark-mode .progress-bar {
+            background: #444;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #10b981, #667eea);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9em;
+            transition: width 0.3s;
+        }
+
+        .example-box {
+            background: #eff6ff;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        body.dark-mode .example-box {
+            background: rgba(102,126,234,0.1);
+        }
+
+        .example-box h5 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .quiz-score {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        body.dark-mode .quiz-score {
+            background: #2a2a2a;
+        }
+
+        .quiz-score h3 {
+            font-size: 2em;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .score-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3em;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .tab-button {
+                padding: 12px 15px;
+                font-size: 0.9em;
+            }
+
+            .card {
+                padding: 15px;
+            }
+        }
+
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Nationella Provet Matematik Åk 9</h1>
+            <p>Ultimat Studieverktyg för NP Våren 2026</p>
+            <div class="countdown" id="countdown"></div>
+            <div class="header-controls">
+                <button class="theme-toggle" onclick="toggleTheme()">🌙 Mörkläge</button>
+            </div>
+        </header>
+
+        <div class="tab-container">
+            <button class="tab-button active" onclick="switchTab('practice')">Träning</button>
+            <button class="tab-button" onclick="switchTab('plan')">5-veckors Plan</button>
+            <button class="tab-button" onclick="switchTab('quiz')">Quiz Mode</button>
+            <button class="tab-button" onclick="switchTab('solutions')">Redovisningsguide</button>
+            <button class="tab-button" onclick="switchTab('formulas')">Formelsamling</button>
+            <button class="tab-button" onclick="switchTab('hacks')">Examenshacks</button>
+            <button class="tab-button" onclick="switchTab('nightbefore')">Kvällen Innan</button>
+        </div>
+
+        <!-- PRACTICE TAB -->
+        <div id="practice" class="tab-content active">
+            <div class="card">
+                <h2>Övningsuppgifter</h2>
+                <p>Träna på autentiska uppgifter från nationella provet. Klicka på en uppgift för att se lösningen.</p>
+            </div>
+
+            <div id="practiceQuestions"></div>
+        </div>
+
+        <!-- STUDY PLAN TAB -->
+        <div id="plan" class="tab-content">
+            <div class="card">
+                <h2>5-Veckors Studieplan</h2>
+                <p>Din personaliserade väg till examen. Dagens dag är markerad i grönt. Klicka på en dag för detaljer.</p>
+            </div>
+            <div id="studyPlan"></div>
+        </div>
+
+        <!-- QUIZ TAB -->
+        <div id="quiz" class="tab-content">
+            <div class="quiz-mode">
+                <h2>Quiz Mode</h2>
+                <p>Testa dina kunskaper under examenslika förhållanden. Välj vilken typ av delprov du vill träna på:</p>
+                <div class="quiz-controls">
+                    <button class="btn btn-primary" onclick="startQuiz('delB')">Delprov B (15 frågor, ingen kalkylator)</button>
+                    <button class="btn btn-secondary" onclick="startQuiz('delC')">Delprov C (3 stora problem)</button>
+                    <button class="btn btn-danger" onclick="startQuiz('delD')">Delprov D (10 problem, kalkylator)</button>
+                </div>
+                <div id="quizContainer"></div>
+            </div>
+        </div>
+
+        <!-- SOLUTIONS GUIDE TAB -->
+        <div id="solutions" class="tab-content">
+            <div class="card">
+                <h2>Redovisningsguide - Så Skriver Du Rätt Svar</h2>
+                <p>Läs hur du ska presentera dina lösningar för att få full poäng. Fokus på struktur och klarhet!</p>
+            </div>
+            <div id="solutionsContent"></div>
+        </div>
+
+        <!-- FORMULAS TAB -->
+        <div id="formulas" class="tab-content">
+            <div class="card">
+                <h2>Formelsamling</h2>
+                <p>Viktiga formler och samband. Klicka på en formel för att se en exempel-uppgift.</p>
+            </div>
+            <div id="formulasContent"></div>
+        </div>
+
+        <!-- HACKS TAB -->
+        <div id="hacks" class="tab-content">
+            <div class="card">
+                <h2>Examenshacks - Smarta Strategier Under Provet</h2>
+                <p>Tricks och knep för att maximera dina poäng även när du inte kan lösa allt.</p>
+            </div>
+            <div id="hacksContent"></div>
+        </div>
+
+        <!-- NIGHT BEFORE TAB -->
+        <div id="nightbefore" class="tab-content">
+            <div class="card">
+                <h2>Kvällen Innan Provet</h2>
+                <p>Fokuserad uppvärmning och mental förberedelse för maximal prestanda.</p>
+            </div>
+            <div id="nightBeforeContent"></div>
+        </div>
+    </div>
+
+    <script>
+        // ===== THEME TOGGLE =====
+        let currentTheme = 'light';
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            currentTheme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+        }
+
+        // ===== TAB SWITCHING =====
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        // ===== COUNTDOWN =====
+        function updateCountdown() {
+            const examDate = new Date('2026-05-13');
+            const today = new Date();
+            const daysLeft = Math.ceil((examDate - today) / (1000 * 60 * 60 * 24));
+            document.getElementById('countdown').innerHTML = `📅 ${daysLeft} dagar kvar till provet!`;
+        }
+
+        updateCountdown();
+
+        // ===== ACCORDION TOGGLE =====
+        function toggleAccordion(element) {
+            const header = element;
+            const content = header.nextElementSibling;
+            const icon = header.querySelector('.accordion-icon');
+
+            content.classList.toggle('open');
+            icon.classList.toggle('open');
+        }
+
+        // ===== REVEAL ANSWER =====
+        function revealAnswer(questionId) {
+            const answer = document.getElementById('answer-' + questionId);
+            answer.classList.toggle('visible');
+        }
+
+        // ===== PRACTICE QUESTIONS DATA =====
+        const practiceQuestions = [
+            // DELPROV B (no calculator)
+            { id: 'b1', type: 'B', level: 'E', topic: 'Aritmetik', question: 'Beräkna: 15 + 8 · 2', answer: '15 + 16 = 31' },
+            { id: 'b2', type: 'B', level: 'E', topic: 'Aritmetik', question: 'Beräkna: 3,5 + 2,7', answer: '6,2' },
+            { id: 'b3', type: 'B', level: 'E', topic: 'Aritmetik', question: 'Beräkna: 24 ÷ 6', answer: '4' },
+            { id: 'b4', type: 'B', level: 'E', topic: 'Bråk', question: 'Beräkna: 1/2 + 1/4', answer: '3/4' },
+            { id: 'b5', type: 'B', level: 'E', topic: 'Procent', question: 'Vad är 50% av 80?', answer: '40' },
+            { id: 'b6', type: 'B', level: 'C', topic: 'Algebra', question: 'Lös ekvationen: x + 5 = 12', answer: 'x = 7' },
+            { id: 'b7', type: 'B', level: 'C', topic: 'Algebra', question: 'Lös ekvationen: 2x = 18', answer: 'x = 9' },
+            { id: 'b8', type: 'B', level: 'E', topic: 'Geometri', question: 'En kvadrats sida är 5 cm. Vad är omkretsen?', answer: '20 cm' },
+            { id: 'b9', type: 'B', level: 'E', topic: 'Geometri', question: 'En rektangels längd är 8 cm och bredd är 4 cm. Vad är arean?', answer: '32 cm²' },
+            { id: 'b10', type: 'B', level: 'C', topic: 'Sannolikhet', question: 'Du singlar slant. Vad är sannolikheten för kron?', answer: '1/2 eller 50%' },
+            { id: 'b11', type: 'B', level: 'E', topic: 'Aritmetik', question: 'Beräkna: 100 - 37', answer: '63' },
+            { id: 'b12', type: 'B', level: 'C', topic: 'Algebra', question: 'Förenkla: 2x + 3x', answer: '5x' },
+            { id: 'b13', type: 'B', level: 'A', topic: 'Algebra', question: 'Lös ekvationen: 2x - 3 = 7', answer: 'x = 5' },
+            { id: 'b14', type: 'B', level: 'E', topic: 'Procent', question: 'En vara kostar 200 kr. Den blir 10% billigare. Vad kostar den nu?', answer: '180 kr' },
+            { id: 'b15', type: 'B', level: 'C', topic: 'Geometri', question: 'En triangel har bas 6 cm och höjd 4 cm. Vad är arean?', answer: '12 cm²' },
+            // DELPROV C (large investigation tasks)
+            { id: 'c1', type: 'C', level: 'C', topic: 'Algebra & Grafer', question: 'En mobiltelefonkostnad består av en fast månadskostnad på 99 kr och 0,50 kr per samtal. a) Skriv en formel för den totala kostnaden y för x samtal. b) Vad kostar det för 100 samtal? c) Omdu betalar 249 kr, hur många samtal ringde du?', answer: 'a) y = 99 + 0,50x  b) 149 kr  c) 300 samtal' },
+            { id: 'c2', type: 'C', level: 'A', topic: 'Statistik & Sannolikhet', question: 'I en skola går 540 elever. Du skall ta ett stickprov på 50 elever. a) Vilka elever bör du välja för att få ett representativt stickprov? b) Du frågår om de är nöjda med skolmaten och 30 svarar ja. Hur många av alla 540 elever förväntas vara nöjda?', answer: 'a) Slumpmässigt urval (t.ex. var tionde elev)  b) 324 elever (30/50 = 60%, 60% av 540)' },
+            { id: 'c3', type: 'C', level: 'A', topic: 'Geometri & Problemlösning', question: 'Du ska bygga en hundgård som är rektangulär. Du har 24 meter staket. a) Rita två olika hundar­gårdar med omkretsen 24m. b) Vilken form ger störst area? c) Beräkna den största möjliga arean.', answer: 'a) T.ex. 8×4 och 6×6  b) Kvadraten (6×6)  c) 36 m²' },
+            // DELPROV D (with calculator, full solutions required)
+            { id: 'd1', type: 'D', level: 'E', topic: 'Aritmetik', question: 'En familj åker på resa. Bensinpriset är 14,95 kr/liter. De fyller på 45 liter bensin. Hur mycket kostar det?', answer: 'Lösning: 14,95 × 45 = 672,75 kr' },
+            { id: 'd2', type: 'D', level: 'E', topic: 'Procent', question: 'En TV kostar 3 500 kr. Det är 25% rabatt. Vad kostar TV:n efter rabatten?', answer: 'Lösning: 25% av 3500 = 875 kr. 3500 - 875 = 2625 kr' },
+            { id: 'd3', type: 'D', level: 'C', topic: 'Algebra', question: 'Två företag erbjuder städtjänster. Företag A: 250 kr + 100 kr/timme. Företag B: 400 kr/timme utan fast kostnad. För hur många timmar är kostnaderna lika?', answer: 'Ekvation: 250 + 100x = 400x. 250 = 300x. x ≈ 0,83 timmar' },
+            { id: 'd4', type: 'D', level: 'C', topic: 'Geometri', question: 'En cylindrisk burk har radien 4 cm och höjden 12 cm. Hur stor är volymen? (Använd π ≈ 3,14)', answer: 'V = π·r²·h = 3,14 × 4² × 12 = 3,14 × 16 × 12 = 602,88 cm³' },
+            { id: 'd5', type: 'D', level: 'A', topic: 'Sannolikhet', question: 'I en påse finns 3 röda, 4 blå och 2 gula kulor. Du plockar en kula slumpmässigt. a) Vad är sannolikheten att plocka en blå kula? b) Vad är sannolikheten att plocka en röd eller gul kula?', answer: 'a) P(blå) = 4/9 ≈ 0,44  b) P(röd eller gul) = 5/9 ≈ 0,56' },
+            { id: 'd6', type: 'D', level: 'C', topic: 'Grafer & Funktioner', question: 'Ett företag säljer chokladbitar. Kostnaden för att tillverka x lådor är: K(x) = 100 + 2x. Intäkten för x lådor är: I(x) = 8x. Vid hur många lådor är kostnaden lika med intäkten?', answer: '100 + 2x = 8x. 100 = 6x. x ≈ 16,67 lådor (eller 17 för praktisk tillämpning)' },
+            { id: 'd7', type: 'D', level: 'E', topic: 'Statistik', question: 'En klasss matte-betyg: E, C, A, E, C, E, D, E. Vilket betyg är mest vanligt (typvärde)?', answer: 'Typvärde = E (förekommer 4 gånger)' },
+            { id: 'd8', type: 'D', level: 'C', topic: 'Bråk & Procent', question: 'En dryck innehåller 2/5 juice och resten är vatten. Hur många procent är juice?', answer: '2/5 = 0,4 = 40%' },
+            { id: 'd9', type: 'D', level: 'A', topic: 'Algebra & Ekvationer', question: 'Lös ekvationen: x² - 5x + 6 = 0', answer: 'Faktorisering: (x - 2)(x - 3) = 0. Lösning: x = 2 eller x = 3' },
+            { id: 'd10', type: 'D', level: 'C', topic: 'Geometri', question: 'En triangel har två vinklar på 45° och 65°. Hur stor är den tredje vinkeln?', answer: '180° - 45° - 65° = 70°' }
+        ];
+
+        // Render practice questions
+        function renderPracticeQuestions() {
+            const container = document.getElementById('practiceQuestions');
+            let html = '';
+
+            const topics = ['Aritmetik', 'Algebra', 'Geometri', 'Bråk', 'Procent', 'Sannolikhet', 'Statistik', 'Grafer & Funktioner'];
+
+            topics.forEach(topic => {
+                const topicQuestions = practiceQuestions.filter(q => q.topic === topic && q.type !== 'C');
+
+                if (topicQuestions.length > 0) {
+                    html += `<div class="card">
+                        <h3>${topic}</h3>`;
+
+                    topicQuestions.forEach(q => {
+                        const levelClass = `badge-${q.level.toLowerCase()}`;
+                        html += `<div class="question-card level-${q.level.toLowerCase()}">
+                            <div style="display: flex; justify-content: space-between; align-items: start;">
+                                <div style="flex: 1;">
+                                    <div>
+                                        <span class="level-badge ${levelClass}">Nivå ${q.level}</span>
+                                        <span class="badge-topic">${q.type}</span>
+                                    </div>
+                                    <p class="question-text">${q.question}</p>
+                                </div>
+                            </div>
+                            <button class="reveal-btn" onclick="revealAnswer('${q.id}')">Visa svar</button>
+                            <div class="hidden-answer" id="answer-${q.id}">
+                                <h4>Svar:</h4>
+                                <p>${q.answer}</p>
+                            </div>
+                        </div>`;
+                    });
+
+                    html += '</div>';
+                }
+            });
+
+            // Add Delprov C
+            html += '<div class="card"><h3>Delprov C - Stora Undersökningsuppgifter</h3>';
+            practiceQuestions.filter(q => q.type === 'C').forEach(q => {
+                const levelClass = `badge-${q.level.toLowerCase()}`;
+                html += `<div class="question-card level-${q.level.toLowerCase()}">
+                    <div>
+                        <span class="level-badge ${levelClass}">Nivå ${q.level}</span>
+                        <span class="badge-topic">Delprov C</span>
+                    </div>
+                    <p class="question-text"><strong>Undersökningsuppgift:</strong> ${q.question}</p>
+                    <button class="reveal-btn" onclick="revealAnswer('${q.id}')">Visa lösning</button>
+                    <div class="hidden-answer" id="answer-${q.id}">
+                        <h4>Lösning:</h4>
+                        <p>${q.answer}</p>
+                    </div>
+                </div>`;
+            });
+            html += '</div>';
+
+            container.innerHTML = html;
+        }
+
+        renderPracticeQuestions();
+
+        // ===== STUDY PLAN =====
+        function renderStudyPlan() {
+            const container = document.getElementById('studyPlan');
+            const startDate = new Date('2026-04-07');
+            const endDate = new Date('2026-05-10');
+            const today = new Date('2026-04-05');
+
+            const plan = [
+                { date: '2026-04-07', duration: '30 min', tasks: 'Delprov B: Aritmetik & Procent (frågor B1-B5)' },
+                { date: '2026-04-08', duration: '30 min', tasks: 'Delprov B: Algebra (frågor B6-B7)' },
+                { date: '2026-04-09', duration: '30 min', tasks: 'Delprov B: Geometri (frågor B8-B9)' },
+                { date: '2026-04-10', duration: 'vila', tasks: 'Lätt repetition, sammanfattning vecka 1' },
+                { date: '2026-04-11', duration: '30 min', tasks: 'Delprov B: Sannolikhet & blandade (B10-B15)' },
+                { date: '2026-04-12', duration: '30 min', tasks: 'Formelsamling: Alla formler, 5 min per formel' },
+                { date: '2026-04-13', duration: 'vila', tasks: 'Vila & mental fokus' },
+                { date: '2026-04-14', duration: '45 min', tasks: 'Delprov C: Första undersökning (C1)' },
+                { date: '2026-04-15', duration: '45 min', tasks: 'Delprov C: Andra undersökning (C2)' },
+                { date: '2026-04-16', duration: '45 min', tasks: 'Delprov C: Tredje undersökning (C3)' },
+                { date: '2026-04-17', duration: 'vila', tasks: 'Sammanfattning vecka 2' },
+                { date: '2026-04-18', duration: '45 min', tasks: 'Delprov D: Problem 1-3 (D1, D2, D3)' },
+                { date: '2026-04-19', duration: '45 min', tasks: 'Delprov D: Problem 4-6 (D4, D5, D6)' },
+                { date: '2026-04-20', duration: 'vila', tasks: 'Vila' },
+                { date: '2026-04-21', duration: '45 min', tasks: 'Delprov D: Problem 7-10 (D7-D10)' },
+                { date: '2026-04-22', duration: '45 min', tasks: 'Redovisningsguide: Studera 5 exempel' },
+                { date: '2026-04-23', duration: '45 min', tasks: 'Quiz Mode: Delprov B (15 frågor)' },
+                { date: '2026-04-24', duration: 'vila', tasks: 'Sammanfattning vecka 3' },
+                { date: '2026-04-25', duration: '60 min', tasks: 'Quiz Mode: Delprov C & D blandat' },
+                { date: '2026-04-26', duration: '60 min', tasks: 'Svåra frågor: Fokus på nivå A-uppgifter' },
+                { date: '2026-04-27', duration: '60 min', tasks: 'Examenshacks: Läs alla strategier' },
+                { date: '2026-04-28', duration: 'vila', tasks: 'Vila' },
+                { date: '2026-04-29', duration: '60 min', tasks: 'Fullständig test: Simulera hela provet Delprov B' },
+                { date: '2026-04-30', duration: '60 min', tasks: 'Fullständig test: Simulera Delprov C & D' },
+                { date: '2026-05-01', duration: '60 min', tasks: 'Granskning: Gör alla misstag igen, förstå varför' },
+                { date: '2026-05-02', duration: 'vila', tasks: 'Sammanfattning vecka 4' },
+                { date: '2026-05-03', duration: '60 min', tasks: 'Fokus på svaga områden från tidigare test' },
+                { date: '2026-05-04', duration: '60 min', tasks: 'Snabbar räkning: Träna mental matematik' },
+                { date: '2026-05-05', duration: 'vila', tasks: 'Vila' },
+                { date: '2026-05-06', duration: '45 min', tasks: 'Sista repetition: Alla nivå-A uppgifter' },
+                { date: '2026-05-07', duration: '30 min', tasks: 'Kvällen innan: Läs "Kvällen innan"-fliken' },
+                { date: '2026-05-08', duration: 'vila', tasks: 'VILA - Du är redo!' },
+                { date: '2026-05-09', duration: 'vila', tasks: 'PROVET ÄR IMORGON - Ta det lugnt!' },
+                { date: '2026-05-10', duration: 'vila', tasks: 'DELPROV B & C IDAG - Ge ditt bästa!' }
+            ];
+
+            let html = '';
+            plan.forEach(day => {
+                const dayDate = new Date(day.date);
+                const isToday = dayDate.toDateString() === today.toDateString();
+                const dayClass = isToday ? 'study-plan-day today' : 'study-plan-day';
+                const dayName = ['Sön', 'Mån', 'Tis', 'Ons', 'Tor', 'Fre', 'Lör'][dayDate.getDay()];
+                const dateStr = dayDate.getDate() + ' apr';
+
+                html += `<div class="${dayClass}">
+                    <div class="day-header">
+                        <span class="day-date">${dayName}, ${dateStr}</span>
+                        <span class="day-duration">${day.duration}</span>
+                    </div>
+                    <div class="day-tasks">${day.tasks}</div>
+                </div>`;
+            });
+
+            container.innerHTML = html;
+        }
+
+        renderStudyPlan();
+
+        // ===== QUIZ FUNCTIONALITY =====
+        let currentQuiz = null;
+        let quizIndex = 0;
+        let quizScores = { got: 0, partial: 0, missed: 0 };
+
+        function startQuiz(type) {
+            currentQuiz = type;
+            quizIndex = 0;
+            quizScores = { got: 0, partial: 0, missed: 0 };
+
+            let quizQuestions = [];
+            if (type === 'delB') {
+                quizQuestions = practiceQuestions.filter(q => q.type === 'B').sort(() => Math.random() - 0.5);
+            } else if (type === 'delC') {
+                quizQuestions = practiceQuestions.filter(q => q.type === 'C');
+            } else if (type === 'delD') {
+                quizQuestions = practiceQuestions.filter(q => q.type === 'D').sort(() => Math.random() - 0.5);
+            }
+
+            showQuizQuestion(quizQuestions);
+        }
+
+        function showQuizQuestion(questions) {
+            const container = document.getElementById('quizContainer');
+            if (quizIndex >= questions.length) {
+                showQuizScore(questions.length);
+                return;
+            }
+
+            const q = questions[quizIndex];
+            let html = `<div class="question-card level-${q.level.toLowerCase()}">
+                <div style="margin-bottom: 20px;">
+                    <span class="level-badge badge-${q.level.toLowerCase()}">Nivå ${q.level}</span>
+                    <span class="badge-topic">${q.type}</span>
+                    <span style="color: #999; margin-left: 10px;">Fråga ${quizIndex + 1} av ${questions.length}</span>
+                </div>
+                <p class="question-text">${q.question}</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: ${((quizIndex + 1) / questions.length) * 100}%">
+                        ${Math.round(((quizIndex + 1) / questions.length) * 100)}%
+                    </div>
+                </div>
+                <button class="reveal-btn" onclick="revealQuizAnswer()">Visa svar</button>
+                <div class="hidden-answer" id="quizAnswer" style="display: none;">
+                    <h4>Svar:</h4>
+                    <p>${q.answer}</p>
+                </div>
+                <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+                    <button class="btn btn-success" onclick="recordAnswer(${quizIndex}, 'got', '${currentQuiz}')">✓ Fick det rätt</button>
+                    <button class="btn btn-secondary" onclick="recordAnswer(${quizIndex}, 'partial', '${currentQuiz}')">~ Delvis rätt</button>
+                    <button class="btn btn-danger" onclick="recordAnswer(${quizIndex}, 'missed', '${currentQuiz}')">✗ Missade det</button>
+                </div>
+            </div>`;
+
+            container.innerHTML = html;
+        }
+
+        function revealQuizAnswer() {
+            const answer = document.getElementById('quizAnswer');
+            answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function recordAnswer(index, result, quizType) {
+            quizScores[result]++;
+            quizIndex++;
+
+            let questions = [];
+            if (quizType === 'delB') {
+                questions = practiceQuestions.filter(q => q.type === 'B').sort(() => Math.random() - 0.5);
+            } else if (quizType === 'delC') {
+                questions = practiceQuestions.filter(q => q.type === 'C');
+            } else if (quizType === 'delD') {
+                questions = practiceQuestions.filter(q => q.type === 'D').sort(() => Math.random() - 0.5);
+            }
+
+            showQuizQuestion(questions);
+        }
+
+        function showQuizScore(total) {
+            const percentage = Math.round((quizScores.got / total) * 100);
+            let feedback = '';
+            if (percentage >= 80) feedback = 'Utmärkt! Du är väl förberedd!';
+            else if (percentage >= 60) feedback = 'Bra! Fokusera på områdena du missa.';
+            else if (percentage >= 40) feedback = 'OK start. Behöver mer träning.';
+            else feedback = 'Fokusera på grunderna. Du klarar det!';
+
+            const container = document.getElementById('quizContainer');
+            container.innerHTML = `
+                <div class="quiz-score">
+                    <h3>Quiz Avslutad!</h3>
+                    <div class="score-circle">${percentage}%</div>
+                    <p style="font-size: 1.2em; margin-bottom: 20px;">${feedback}</p>
+                    <p>Du fick rätt på <strong>${quizScores.got}</strong> av ${total} frågor.</p>
+                    <p style="margin: 10px 0;">Delvis rätt: ${quizScores.partial} | Missade: ${quizScores.missed}</p>
+                    <button class="btn btn-primary" style="margin-top: 20px;" onclick="document.getElementById('quizContainer').innerHTML = '<p>Välj en quiz-typ ovan för att starta.</p>'">Tillbaka till start</button>
+                </div>
+            `;
+        }
+
+        // ===== SOLUTIONS GUIDE =====
+        function renderSolutionsGuide() {
+            const container = document.getElementById('solutionsContent');
+            const solutions = [
+                {
+                    type: 'E-nivå (Enkel)',
+                    example: 'Beräkna omkretsen av en kvadrat med sidan 5 cm.',
+                    good: 'Omkrets = 4 × 5 = 20 cm',
+                    bad: '20'
+                },
+                {
+                    type: 'C-nivå (Medel)',
+                    example: 'Lös ekvationen: 3x + 5 = 20',
+                    good: '3x + 5 = 20\n3x = 20 - 5\n3x = 15\nx = 15 ÷ 3\nx = 5',
+                    bad: 'x = 5'
+                },
+                {
+                    type: 'A-nivå (Svår)',
+                    example: 'Lös ekvationen: x² - 5x + 6 = 0',
+                    good: 'Använd faktorisering eller pq-formeln.\nx² - 5x + 6 = 0\n(x - 2)(x - 3) = 0\nx = 2 eller x = 3',
+                    bad: 'x = 2'
+                },
+                {
+                    type: 'Ordproblem',
+                    example: 'En butik har äpplen för 5 kr vardera. Du köper 12 äpplen. Hur mycket kostar det?',
+                    good: 'Pris per äpple: 5 kr\nAntal äpplen: 12\nTotalt: 5 × 12 = 60 kr',
+                    bad: '60'
+                },
+                {
+                    type: 'Geometri',
+                    example: 'En cylinders radie är 3 cm och höjd är 10 cm. Beräkna volymen.',
+                    good: 'Formel: V = π × r² × h\nV = 3,14 × 3² × 10\nV = 3,14 × 9 × 10\nV = 282,6 cm³',
+                    bad: 'V = 3,14 × 3 × 10 = 94,2'
+                }
+            ];
+
+            let html = '<div class="card"><h3>Viktiga Redovisningsprinciper</h3>';
+            html += '<div class="tips-section"><h4>Kom ihåg:</h4><ul>';
+            html += '<li>Visa ALLA dina steg - aldrig bara slutsvaret</li>';
+            html += '<li>Skriv vad du gör mellan varje rad (t.ex. "subtrahera 5 från båda sidor")</li>';
+            html += '<li>Skriv enheter (cm, m, kr, etc.)</li>';
+            html += '<li>Avrunda bara i slutet (och bara om det sägs i uppgiften)</li>';
+            html += '<li>Använd matematisk notation korrekt</li>';
+            html += '</ul></div></div>';
+
+            solutions.forEach((sol, idx) => {
+                html += `<div class="card"><h3>${sol.type}</h3>
+                    <p><strong>Exempel:</strong> ${sol.example}</p>
+                    <div class="comparison-grid">
+                        <div class="good-answer">
+                            <h4>✓ Rätt Redovisning</h4>
+                            <p style="white-space: pre-line; font-family: monospace; font-size: 0.95em;">${sol.good}</p>
+                        </div>
+                        <div class="bad-answer">
+                            <h4>✗ Felaktig Redovisning</h4>
+                            <p>${sol.bad}</p>
+                            <p style="margin-top: 10px; font-size: 0.9em; color: #999;">Varför är det fel? Elevbedömaren kan inte se ditt arbete.</p>
+                        </div>
+                    </div>
+                </div>`;
+            });
+
+            container.innerHTML = html;
+        }
+
+        renderSolutionsGuide();
+
+        // ===== FORMULAS =====
+        function renderFormulas() {
+            const container = document.getElementById('formulasContent');
+            const formulas = [
+                {
+                    name: 'Omkrets av rektangel',
+                    formula: 'O = 2(l + b)',
+                    example: 'En rektangel med längd 8 och bredd 5: O = 2(8 + 5) = 26'
+                },
+                {
+                    name: 'Area av rektangel',
+                    formula: 'A = l × b',
+                    example: 'En rektangel med längd 8 och bredd 5: A = 8 × 5 = 40'
+                },
+                {
+                    name: 'Area av triangel',
+                    formula: 'A = (bas × höjd) / 2',
+                    example: 'En triangel med bas 10 och höjd 6: A = (10 × 6) / 2 = 30'
+                },
+                {
+                    name: 'Volym av cylinder',
+                    formula: 'V = π × r² × h',
+                    example: 'En cylinder med r = 3 och h = 10: V = 3,14 × 9 × 10 = 282,6'
+                },
+                {
+                    name: 'Pythagoras sats',
+                    formula: 'a² + b² = c²',
+                    example: 'Rätvinklig triangel med kateter 3 och 4: 3² + 4² = c², c = 5'
+                },
+                {
+                    name: 'Procent',
+                    formula: 'Procent = (del / helhet) × 100',
+                    example: '15 av 60 är: (15 / 60) × 100 = 25%'
+                },
+                {
+                    name: 'Sannolikhet',
+                    formula: 'P = (antal gynnsamma) / (totalt antal)',
+                    example: 'Sannolikhet att få en 6 på en tärning: P = 1/6 ≈ 0,167'
+                },
+                {
+                    name: 'Genomsnitt',
+                    formula: 'Genomsnitt = summa / antal värden',
+                    example: 'Betyg: A, B, C. Genomsnitt = (3 + 2 + 1) / 3 ≈ 2'
+                }
+            ];
+
+            let html = '';
+            formulas.forEach(f => {
+                html += `<div class="formula-card">
+                    <div class="formula-name">${f.name}</div>
+                    <div class="formula-text">${f.formula}</div>
+                    <div class="example-box">
+                        <h5>Exempel:</h5>
+                        <p>${f.example}</p>
+                    </div>
+                </div>`;
+            });
+
+            container.innerHTML = html;
+        }
+
+        renderFormulas();
+
+        // ===== EXAM HACKS =====
+        function renderHacks() {
+            const container = document.getElementById('hacksContent');
+            const hacks = [
+                {
+                    title: 'Partiell Poäng - Gör Något Även Om Du Inte Löser Allt',
+                    tips: ['Visa dina tankar och försök även om du inte är säker', 'En rätt början kan ge E-poäng', 'Skriv formeln även om du inte kan lösa hela problemet', 'Svaret behöver inte vara perfekt för att få poäng']
+                },
+                {
+                    title: 'Bakåt-kontrollen - Verifiering Utan Att Göra Om Allt',
+                    tips: ['Sätt in ditt svar i den ursprungliga ekvationen', 'T.ex. om du löste x + 5 = 12 och fick x = 7: kontrollera 7 + 5 = 12 ✓', 'Tar bara 10 sekunder och kan spara dig från räknefel']
+                },
+                {
+                    title: 'Estimering & Avrundning Under Provet',
+                    tips: ['23,7 × 8,9? Avrunda till 24 × 9 = 216 för snabb kontroll', 'Använd detta för att se om ditt svar är rimligt', 'En enorm skillnad betyder att du gjort fel']
+                },
+                {
+                    title: 'Skip vs Push - När Ska Du Skippa En Fråga?',
+                    tips: ['SKIP en fråga om: du inte förstår den alls eller beräkningar är för komplicerade', 'PUSH om: du förstår metoden men är osäker på svaret', 'Gissa systematiskt - det är bättre än inget!']
+                },
+                {
+                    title: 'Tiden Under Provet',
+                    tips: ['Delprov B: 50 min för ~15 frågor. ~3 min per fråga.', 'Delprov C: 50 min för 1 stor uppgift. Läs noga, planera innan!', 'Delprov D: 120 min för ~10 uppgifter. ~10-12 min per uppgift.', 'Spara 5 minuter för att granska dina svar']
+                },
+                {
+                    title: 'De Fem Svenska Fraser Som Skapar Poäng',
+                    tips: ['"Jag använder...": "Jag använder formeln..." (visar kunskap)', '"Därför...": "Därför blir x = 5" (visar resonemang)', '"Det betyder att...": "Det betyder att volymen är 60 cm³" (visar förståelse)', '"Jag kontrollerar...": "Jag kontrollerar mitt svar..." (visar noggrannhet)', '"En möjlig lösning är...": Vid flera möjligheter (visar tänkande)']
+                }
+            ];
+
+            let html = '<div class="card"><h3>Strategi Under Provet</h3>';
+            hacks.forEach(hack => {
+                html += `<div style="margin-bottom: 30px;">
+                    <h4 style="color: #667eea; margin-bottom: 15px;">🎯 ${hack.title}</h4>
+                    <ul style="margin-left: 20px; line-height: 1.8;">`;
+                hack.tips.forEach(tip => {
+                    html += `<li>${tip}</li>`;
+                });
+                html += '</ul></div>';
+            });
+            html += '</div>';
+
+            container.innerHTML = html;
+        }
+
+        renderHacks();
+
+        // ===== NIGHT BEFORE =====
+        function renderNightBefore() {
+            const container = document.getElementById('nightBeforeContent');
+            let html = `
+                <div class="card">
+                    <h2>10 Minuters Uppvärmningsquiz</h2>
+                    <p>Gör denna enkla quiz för att få huvudet i matte-läge!</p>
+                    <div class="tips-section">
+                        <h4>Snabba Frågor:</h4>
+                        <ol style="margin-left: 20px;">
+                            <li>Vad är 20 + 8 × 2? (Svar: 36)</li>
+                            <li>Lös: x + 5 = 12 (Svar: x = 7)</li>
+                            <li>En kvadrat har sidan 4 cm. Omkrets? (Svar: 16 cm)</li>
+                            <li>Vad är 50% av 200? (Svar: 100)</li>
+                            <li>Lös: 2x = 18 (Svar: x = 9)</li>
+                            <li>En rektangel: längd 5, bredd 3. Area? (Svar: 15)</li>
+                            <li>Vad är 1/2 + 1/4? (Svar: 3/4)</li>
+                            <li>En triangel med bas 8 och höjd 6. Area? (Svar: 24)</li>
+                            <li>Sannolikhet för krona när man singlar slant? (Svar: 1/2)</li>
+                            <li>Vad är 100 - 37? (Svar: 63)</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Mental Förberedelse</h2>
+                    <div class="tips-section">
+                        <h4>Viktigt att Tänka på Innan Provet:</h4>
+                        <ul style="margin-left: 20px;">
+                            <li><strong>Du är väl förberedd.</strong> Du har tränat på många frågor.</li>
+                            <li><strong>Det är OK att det är svårt.</strong> Provet ska testa dina gränser.</li>
+                            <li><strong>Du behöver inte lösa allt.</strong> Focus på det du kan!</li>
+                            <li><strong>Läs noga.</strong> Många misstag kommer från att läsa för fort.</li>
+                            <li><strong>Visa ditt arbete.</strong> Det är viktigare än slutsvaret.</li>
+                            <li><strong>Använd tiden rätt.</strong> Delprov B först (no calc), sedan C & D.</li>
+                            <li><strong>Andas djupt om du blir nervös.</strong> 10 lugna andetag = klarare huvud.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Checklista för Provet</h2>
+                    <div class="tips-section">
+                        <h4>Vad Du Behöver Ta Med Dig:</h4>
+                        <ul style="margin-left: 20px;">
+                            <li>✓ Penna & blyertspenna (ta flera!)</li>
+                            <li>✓ Radergummi</li>
+                            <li>✓ Linjal</li>
+                            <li>✓ Kalkylator (för Delprov C & D)</li>
+                            <li>✓ Formelblad (du får det i provet)</li>
+                            <li>✓ Vatten</li>
+                            <li>✓ Något att ätna (energi!)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Provdagar - Vad Du Behöver Veta</h2>
+                    <div class="tips-section">
+                        <h4>11 Maj 2026: Delprov B & C</h4>
+                        <ul style="margin-left: 20px;">
+                            <li>Delprov B: 50 minuter, NO miniräknare, formelblad</li>
+                            <li>Delprov C: 50 minuter med rast, miniräknare tillåtet</li>
+                            <li>Focus på noggrannhet över hastighet</li>
+                        </ul>
+                    </div>
+                    <div class="tips-section" style="margin-top: 15px;">
+                        <h4>13 Maj 2026: Delprov D</h4>
+                        <ul style="margin-left: 20px;">
+                            <li>Delprov D: 120 minuter, miniräknare & formelblad</li>
+                            <li>De största möjligheterna att få många poäng här!</li>
+                            <li>Börja med enkla uppgifter för att få momentum</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Sista Råd</h2>
+                    <div class="tips-section">
+                        <p style="font-size: 1.1em; font-weight: 600; color: #10b981;">Du är redo. Du har tränat hårt. Nu är det dags att visa vad du kan!</p>
+                        <p style="margin-top: 15px;">Denna studieplan och dessa övningar är bara den nya punkten. Det viktiga är att DU redan har den kunskap som krävs. Provet är bara ett sätt att visa det.</p>
+                        <p style="margin-top: 15px;">Lycka till! Du kommer att klara det! 💪</p>
+                    </div>
+                </div>
+            `;
+
+            container.innerHTML = html;
+        }
+
+        renderNightBefore();
+    </script>
+</body>
+</html>
