@@ -912,7 +912,9 @@
         let currentTheme = 'light';
         function toggleTheme() {
             document.body.classList.toggle('dark-mode');
-            currentTheme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+            const isDark = document.body.classList.contains('dark-mode');
+            currentTheme = isDark ? 'dark' : 'light';
+            document.querySelector('.theme-toggle').textContent = isDark ? '\u2600\uFE0F Ljust l\u00E4ge' : '\uD83C\uDF19 M\u00F6rkl\u00E4ge';
         }
 
         // ===== TAB SWITCHING =====
@@ -932,7 +934,7 @@
 
         // ===== COUNTDOWN =====
         function updateCountdown() {
-            const examDate = new Date('2026-05-13');
+            const examDate = new Date(2026, 4, 11); // 11 maj (Delprov B & C)
             const today = new Date();
             const daysLeft = Math.ceil((examDate - today) / (1000 * 60 * 60 * 24));
             document.getElementById('countdown').innerHTML = `📅 ${daysLeft} dagar kvar till provet!`;
@@ -976,7 +978,7 @@
             { id: 'b15', type: 'B', level: 'C', topic: 'Geometri', question: 'En triangel har bas 6 cm och höjd 4 cm. Vad är arean?', answer: '12 cm²' },
             // DELPROV C (large investigation tasks)
             { id: 'c1', type: 'C', level: 'C', topic: 'Algebra & Grafer', question: 'En mobiltelefonkostnad består av en fast månadskostnad på 99 kr och 0,50 kr per samtal. a) Skriv en formel för den totala kostnaden y för x samtal. b) Vad kostar det för 100 samtal? c) Omdu betalar 249 kr, hur många samtal ringde du?', answer: 'a) y = 99 + 0,50x  b) 149 kr  c) 300 samtal' },
-            { id: 'c2', type: 'C', level: 'A', topic: 'Statistik & Sannolikhet', question: 'I en skola går 540 elever. Du skall ta ett stickprov på 50 elever. a) Vilka elever bör du välja för att få ett representativt stickprov? b) Du frågår om de är nöjda med skolmaten och 30 svarar ja. Hur många av alla 540 elever förväntas vara nöjda?', answer: 'a) Slumpmässigt urval (t.ex. var tionde elev)  b) 324 elever (30/50 = 60%, 60% av 540)' },
+            { id: 'c2', type: 'C', level: 'A', topic: 'Statistik & Sannolikhet', question: 'I en skola går 540 elever. Du skall ta ett stickprov på 50 elever. a) Vilka elever bör du välja för att få ett representativt stickprov? b) Du frågar om de är nöjda med skolmaten och 30 svarar ja. Hur många av alla 540 elever förväntas vara nöjda?', answer: 'a) Slumpmässigt urval (t.ex. var tionde elev)  b) 324 elever (30/50 = 60%, 60% av 540)' },
             { id: 'c3', type: 'C', level: 'A', topic: 'Geometri & Problemlösning', question: 'Du ska bygga en hundgård som är rektangulär. Du har 24 meter staket. a) Rita två olika hundar­gårdar med omkretsen 24m. b) Vilken form ger störst area? c) Beräkna den största möjliga arean.', answer: 'a) T.ex. 8×4 och 6×6  b) Kvadraten (6×6)  c) 36 m²' },
             // DELPROV D (with calculator, full solutions required)
             { id: 'd1', type: 'D', level: 'E', topic: 'Aritmetik', question: 'En familj åker på resa. Bensinpriset är 14,95 kr/liter. De fyller på 45 liter bensin. Hur mycket kostar det?', answer: 'Lösning: 14,95 × 45 = 672,75 kr' },
@@ -1093,13 +1095,16 @@
                 { date: '2026-05-06', duration: '45 min', tasks: 'Sista repetition: Alla nivå-A uppgifter' },
                 { date: '2026-05-07', duration: '30 min', tasks: 'Kvällen innan: Läs "Kvällen innan"-fliken' },
                 { date: '2026-05-08', duration: 'vila', tasks: 'VILA - Du är redo!' },
-                { date: '2026-05-09', duration: 'vila', tasks: 'PROVET ÄR IMORGON - Ta det lugnt!' },
-                { date: '2026-05-10', duration: 'vila', tasks: 'DELPROV B & C IDAG - Ge ditt bästa!' }
+                { date: '2026-05-09', duration: '30 min', tasks: 'Sista repetition: Kvällen Innan-fliken' },
+                { date: '2026-05-10', duration: 'vila', tasks: 'PROVET ÄR IMORGON - Vila och ladda!' },
+                { date: '2026-05-11', duration: 'vila', tasks: 'DELPROV B & C IDAG - Ge ditt bästa!' },
+                { date: '2026-05-13', duration: 'vila', tasks: 'DELPROV D IDAG - Sista chansen för poäng!' }
             ];
 
             let html = '';
             plan.forEach(day => {
-                const dayDate = new Date(day.date);
+                const [y, m, d] = day.date.split('-').map(Number);
+                const dayDate = new Date(y, m - 1, d);
                 const isToday = dayDate.toDateString() === today.toDateString();
                 const dayClass = isToday ? 'study-plan-day today' : 'study-plan-day';
                 const dayName = ['Sön', 'Mån', 'Tis', 'Ons', 'Tor', 'Fre', 'Lör'][dayDate.getDay()];

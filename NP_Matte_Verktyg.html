@@ -1103,7 +1103,7 @@
             <div class="card">
                 <h2>✓ Redovisningsmallen</h2>
                 <p>BAD vs GOOD: Se exakt vad som får poäng och vad som inte gör det.</p>
-                <p style="color: #666; font-size: 0.95em;">De EXAKTA fraser som sjuklövern lärare letar efter.</p>
+                <p style="color: #666; font-size: 0.95em;">De EXAKTA fraser som lärarna letar efter.</p>
             </div>
 
             <div class="card">
@@ -1157,7 +1157,7 @@ Kontroll: 2(4) + 5 = 8 + 5 = 13 ✓
                         <div class="example-box">
 Area = 12
                         </div>
-                        <p style="color: #ef4444; margin-top: 10px;"><strong>Problem:</strong> <span class="highlight">SAKNAR ENHETER</span>. Även om beräkningen är rätt, c det inga poäng! Och vi ser inte hur den kom fram till 12.</p>
+                        <p style="color: #ef4444; margin-top: 10px;"><strong>Problem:</strong> <span class="highlight">SAKNAR ENHETER</span>. Även om beräkningen är rätt ger det inga poäng! Och vi ser inte hur den kom fram till 12.</p>
                     </div>
 
                     <div class="good-answer">
@@ -1210,7 +1210,7 @@ Från 08:00 till 14:00 ser man att:
 - Från 12:00 till 14:00 sjönk temperaturen från 20°C till 15°C
 - Det betyder att den sjönk med 2,5°C per timme
                         </div>
-                        <p style="color: #10b981; margin-top: 10px;"><strong>Varför det funkar:</strong> Konkreta siffror från grafen. Vi ser EXAKT vad som lästes av. Jämförelser.Analys av förändringshastigheten.</p>
+                        <p style="color: #10b981; margin-top: 10px;"><strong>Varför det funkar:</strong> Konkreta siffror från grafen. Vi ser EXAKT vad som lästes av. Jämförelser. Analys av förändringshastigheten.</p>
                     </div>
                 </div>
 
@@ -1283,7 +1283,7 @@ Från 08:00 till 14:00 ser man att:
                         <strong>Exempel:</strong><br>
                         "Grafen stiger från 10 till 20. <strong>Det betyder att</strong> temperaturen ökade med 10 grader."<br>
                         "x = 0 eller x = 5. <strong>Det visar att</strong> vi har två lösningar på denna ekvation."<br>
-                        <strong>Varför det funkar:</strong> Du kopplar resultatet till den ursprungliga problemet.
+                        <strong>Varför det funkar:</strong> Du kopplar resultatet till det ursprungliga problemet.
                     </div>
                 </div>
 
@@ -1805,20 +1805,7 @@ Från 08:00 till 14:00 ser man att:
             checkbox.checked = !checkbox.checked;
         }
 
-        // Initialize
-        document.addEventListener('DOMContentLoaded', function() {
-            // Expandables already have inline onclick handlers, no need to add duplicates
-
-            // Add click handlers to checklist items
-            const checklistItems = document.querySelectorAll('.checklist-item');
-            checklistItems.forEach(item => {
-                item.addEventListener('click', function(e) {
-                    if (e.target.tagName !== 'INPUT') {
-                        toggleCheckbox(this);
-                    }
-                });
-            });
-        });
+        // Note: checklist items use inline onclick="toggleCheckbox(this)"
     </script>
 </body>
 </html>
