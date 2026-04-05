@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nationella Provet Matematik Åk 9 - Ultimat Studieverktyg</title>
+    <meta name="description" content="Interaktivt studieverktyg för nationella provet i matematik årskurs 9. Quiz, övningsuppgifter, 5-veckorsplan och examensstrategier.">
+    <meta name="theme-color" content="#667eea">
+    <title>NP Matte Åk 9 - Studieverktyg</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        :focus-visible {
+            outline: 3px solid #667eea;
+            outline-offset: 2px;
         }
 
         body {
@@ -636,26 +643,176 @@
         }
 
         @media (max-width: 768px) {
+            .container {
+                padding: 12px;
+            }
+
+            header {
+                padding: 20px 15px;
+                margin-bottom: 20px;
+                border-radius: 8px;
+            }
+
             header h1 {
-                font-size: 1.8em;
+                font-size: 1.5em;
+            }
+
+            header .countdown {
+                font-size: 1em;
+                padding: 8px 14px;
+            }
+
+            .tab-container {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                gap: 0;
+            }
+
+            .tab-container::-webkit-scrollbar {
+                display: none;
             }
 
             .tab-button {
-                padding: 12px 15px;
-                font-size: 0.9em;
+                padding: 12px 16px;
+                font-size: 0.85em;
+                min-height: 44px;
+                flex-shrink: 0;
             }
 
             .card {
+                padding: 16px;
+                border-radius: 8px;
+            }
+
+            .card h2 {
+                font-size: 1.4em;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quiz-controls {
+                flex-direction: column;
+            }
+
+            .quiz-controls .btn {
+                width: 100%;
+                min-height: 48px;
+            }
+
+            .btn {
+                min-height: 44px;
+                font-size: 1em;
+            }
+
+            .reveal-btn {
+                min-height: 44px;
+                width: 100%;
+            }
+
+            .question-text {
+                font-size: 1em;
+            }
+
+            .score-circle {
+                width: 120px;
+                height: 120px;
+                font-size: 2.5em;
+            }
+
+            .study-plan-day {
                 padding: 15px;
             }
+
+            .day-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 6px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.3em;
+            }
+
+            .card h2 {
+                font-size: 1.2em;
+            }
+
+            .tab-button {
+                padding: 10px 12px;
+                font-size: 0.8em;
+            }
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 0 -16px;
+            padding: 0 16px;
         }
 
         .hidden {
             display: none !important;
         }
+
+        .site-nav {
+            display: flex;
+            gap: 0;
+            background: #1e1b4b;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .site-nav-link {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            padding: 14px 20px;
+            font-weight: 600;
+            font-size: 0.95em;
+            white-space: nowrap;
+            transition: background 0.2s, color 0.2s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .site-nav-link:hover {
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        .site-nav-link.active {
+            color: white;
+            border-bottom-color: #667eea;
+            background: rgba(255,255,255,0.05);
+        }
+
+        body.dark-mode .site-nav {
+            background: #0f0e1a;
+        }
+
+        @media (max-width: 768px) {
+            .site-nav-link {
+                padding: 12px 16px;
+                font-size: 0.85em;
+            }
+        }
     </style>
 </head>
 <body>
+    <nav class="site-nav" role="navigation" aria-label="Sidnavigering">
+        <a href="index.html" class="site-nav-link active" aria-current="page">Studieverktyg</a>
+        <a href="NP_Matematik_Ak9_Strategi.html" class="site-nav-link">Strategirapport</a>
+        <a href="NP_Matte_Verktyg.html" class="site-nav-link">Verktyg & Formler</a>
+    </nav>
+
     <div class="container">
         <header>
             <h1>Nationella Provet Matematik Åk 9</h1>
@@ -666,18 +823,18 @@
             </div>
         </header>
 
-        <div class="tab-container">
-            <button class="tab-button active" onclick="switchTab('practice')">Träning</button>
-            <button class="tab-button" onclick="switchTab('plan')">5-veckors Plan</button>
-            <button class="tab-button" onclick="switchTab('quiz')">Quiz Mode</button>
-            <button class="tab-button" onclick="switchTab('solutions')">Redovisningsguide</button>
-            <button class="tab-button" onclick="switchTab('formulas')">Formelsamling</button>
-            <button class="tab-button" onclick="switchTab('hacks')">Examenshacks</button>
-            <button class="tab-button" onclick="switchTab('nightbefore')">Kvällen Innan</button>
+        <div class="tab-container" role="tablist" aria-label="Innehållsflikar">
+            <button class="tab-button active" role="tab" aria-selected="true" aria-controls="practice" onclick="switchTab('practice', this)">Träning</button>
+            <button class="tab-button" role="tab" aria-selected="false" aria-controls="plan" onclick="switchTab('plan', this)">5-veckors Plan</button>
+            <button class="tab-button" role="tab" aria-selected="false" aria-controls="quiz" onclick="switchTab('quiz', this)">Quiz Mode</button>
+            <button class="tab-button" role="tab" aria-selected="false" aria-controls="solutions" onclick="switchTab('solutions', this)">Redovisningsguide</button>
+            <button class="tab-button" role="tab" aria-selected="false" aria-controls="formulas" onclick="switchTab('formulas', this)">Formelsamling</button>
+            <button class="tab-button" role="tab" aria-selected="false" aria-controls="hacks" onclick="switchTab('hacks', this)">Examenshacks</button>
+            <button class="tab-button" role="tab" aria-selected="false" aria-controls="nightbefore" onclick="switchTab('nightbefore', this)">Kvällen Innan</button>
         </div>
 
         <!-- PRACTICE TAB -->
-        <div id="practice" class="tab-content active">
+        <div id="practice" class="tab-content active" role="tabpanel">
             <div class="card">
                 <h2>Övningsuppgifter</h2>
                 <p>Träna på autentiska uppgifter från nationella provet. Klicka på en uppgift för att se lösningen.</p>
@@ -687,7 +844,7 @@
         </div>
 
         <!-- STUDY PLAN TAB -->
-        <div id="plan" class="tab-content">
+        <div id="plan" class="tab-content" role="tabpanel">
             <div class="card">
                 <h2>5-Veckors Studieplan</h2>
                 <p>Din personaliserade väg till examen. Dagens dag är markerad i grönt. Klicka på en dag för detaljer.</p>
@@ -696,7 +853,7 @@
         </div>
 
         <!-- QUIZ TAB -->
-        <div id="quiz" class="tab-content">
+        <div id="quiz" class="tab-content" role="tabpanel">
             <div class="quiz-mode">
                 <h2>Quiz Mode</h2>
                 <p>Testa dina kunskaper under examenslika förhållanden. Välj vilken typ av delprov du vill träna på:</p>
@@ -710,7 +867,7 @@
         </div>
 
         <!-- SOLUTIONS GUIDE TAB -->
-        <div id="solutions" class="tab-content">
+        <div id="solutions" class="tab-content" role="tabpanel">
             <div class="card">
                 <h2>Redovisningsguide - Så Skriver Du Rätt Svar</h2>
                 <p>Läs hur du ska presentera dina lösningar för att få full poäng. Fokus på struktur och klarhet!</p>
@@ -719,7 +876,7 @@
         </div>
 
         <!-- FORMULAS TAB -->
-        <div id="formulas" class="tab-content">
+        <div id="formulas" class="tab-content" role="tabpanel">
             <div class="card">
                 <h2>Formelsamling</h2>
                 <p>Viktiga formler och samband. Klicka på en formel för att se en exempel-uppgift.</p>
@@ -728,7 +885,7 @@
         </div>
 
         <!-- HACKS TAB -->
-        <div id="hacks" class="tab-content">
+        <div id="hacks" class="tab-content" role="tabpanel">
             <div class="card">
                 <h2>Examenshacks - Smarta Strategier Under Provet</h2>
                 <p>Tricks och knep för att maximera dina poäng även när du inte kan lösa allt.</p>
@@ -737,7 +894,7 @@
         </div>
 
         <!-- NIGHT BEFORE TAB -->
-        <div id="nightbefore" class="tab-content">
+        <div id="nightbefore" class="tab-content" role="tabpanel">
             <div class="card">
                 <h2>Kvällen Innan Provet</h2>
                 <p>Fokuserad uppvärmning och mental förberedelse för maximal prestanda.</p>
@@ -755,16 +912,18 @@
         }
 
         // ===== TAB SWITCHING =====
-        function switchTab(tabName) {
+        function switchTab(tabName, btn) {
             document.querySelectorAll('.tab-content').forEach(tab => {
                 tab.classList.remove('active');
             });
-            document.querySelectorAll('.tab-button').forEach(btn => {
-                btn.classList.remove('active');
+            document.querySelectorAll('.tab-button').forEach(b => {
+                b.classList.remove('active');
+                b.setAttribute('aria-selected', 'false');
             });
 
             document.getElementById(tabName).classList.add('active');
-            event.target.classList.add('active');
+            btn.classList.add('active');
+            btn.setAttribute('aria-selected', 'true');
         }
 
         // ===== COUNTDOWN =====
@@ -895,7 +1054,7 @@
             const container = document.getElementById('studyPlan');
             const startDate = new Date('2026-04-07');
             const endDate = new Date('2026-05-10');
-            const today = new Date('2026-04-05');
+            const today = new Date();
 
             const plan = [
                 { date: '2026-04-07', duration: '30 min', tasks: 'Delprov B: Aritmetik & Procent (frågor B1-B5)' },
@@ -940,7 +1099,8 @@
                 const isToday = dayDate.toDateString() === today.toDateString();
                 const dayClass = isToday ? 'study-plan-day today' : 'study-plan-day';
                 const dayName = ['Sön', 'Mån', 'Tis', 'Ons', 'Tor', 'Fre', 'Lör'][dayDate.getDay()];
-                const dateStr = dayDate.getDate() + ' apr';
+                const monthNames = ['jan', 'feb', 'mar', 'apr', 'maj', 'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'dec'];
+                const dateStr = dayDate.getDate() + ' ' + monthNames[dayDate.getMonth()];
 
                 html += `<div class="${dayClass}">
                     <div class="day-header">
@@ -958,6 +1118,7 @@
 
         // ===== QUIZ FUNCTIONALITY =====
         let currentQuiz = null;
+        let currentQuizQuestions = [];
         let quizIndex = 0;
         let quizScores = { got: 0, partial: 0, missed: 0 };
 
@@ -966,16 +1127,15 @@
             quizIndex = 0;
             quizScores = { got: 0, partial: 0, missed: 0 };
 
-            let quizQuestions = [];
             if (type === 'delB') {
-                quizQuestions = practiceQuestions.filter(q => q.type === 'B').sort(() => Math.random() - 0.5);
+                currentQuizQuestions = practiceQuestions.filter(q => q.type === 'B').sort(() => Math.random() - 0.5);
             } else if (type === 'delC') {
-                quizQuestions = practiceQuestions.filter(q => q.type === 'C');
+                currentQuizQuestions = practiceQuestions.filter(q => q.type === 'C');
             } else if (type === 'delD') {
-                quizQuestions = practiceQuestions.filter(q => q.type === 'D').sort(() => Math.random() - 0.5);
+                currentQuizQuestions = practiceQuestions.filter(q => q.type === 'D').sort(() => Math.random() - 0.5);
             }
 
-            showQuizQuestion(quizQuestions);
+            showQuizQuestion(currentQuizQuestions);
         }
 
         function showQuizQuestion(questions) {
@@ -1004,9 +1164,9 @@
                     <p>${q.answer}</p>
                 </div>
                 <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
-                    <button class="btn btn-success" onclick="recordAnswer(${quizIndex}, 'got', '${currentQuiz}')">✓ Fick det rätt</button>
-                    <button class="btn btn-secondary" onclick="recordAnswer(${quizIndex}, 'partial', '${currentQuiz}')">~ Delvis rätt</button>
-                    <button class="btn btn-danger" onclick="recordAnswer(${quizIndex}, 'missed', '${currentQuiz}')">✗ Missade det</button>
+                    <button class="btn btn-success" onclick="recordAnswer(${quizIndex}, 'got')">✓ Fick det rätt</button>
+                    <button class="btn btn-secondary" onclick="recordAnswer(${quizIndex}, 'partial')">~ Delvis rätt</button>
+                    <button class="btn btn-danger" onclick="recordAnswer(${quizIndex}, 'missed')">✗ Missade det</button>
                 </div>
             </div>`;
 
@@ -1018,20 +1178,10 @@
             answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
         }
 
-        function recordAnswer(index, result, quizType) {
+        function recordAnswer(index, result) {
             quizScores[result]++;
             quizIndex++;
-
-            let questions = [];
-            if (quizType === 'delB') {
-                questions = practiceQuestions.filter(q => q.type === 'B').sort(() => Math.random() - 0.5);
-            } else if (quizType === 'delC') {
-                questions = practiceQuestions.filter(q => q.type === 'C');
-            } else if (quizType === 'delD') {
-                questions = practiceQuestions.filter(q => q.type === 'D').sort(() => Math.random() - 0.5);
-            }
-
-            showQuizQuestion(questions);
+            showQuizQuestion(currentQuizQuestions);
         }
 
         function showQuizScore(total) {
@@ -1263,7 +1413,7 @@
                         <ul style="margin-left: 20px;">
                             <li><strong>Du är väl förberedd.</strong> Du har tränat på många frågor.</li>
                             <li><strong>Det är OK att det är svårt.</strong> Provet ska testa dina gränser.</li>
-                            <li><strong>Du behöver inte lösa allt.</strong> Focus på det du kan!</li>
+                            <li><strong>Du behöver inte lösa allt.</strong> Fokusera på det du kan!</li>
                             <li><strong>Läs noga.</strong> Många misstag kommer från att läsa för fort.</li>
                             <li><strong>Visa ditt arbete.</strong> Det är viktigare än slutsvaret.</li>
                             <li><strong>Använd tiden rätt.</strong> Delprov B först (no calc), sedan C & D.</li>
@@ -1283,7 +1433,7 @@
                             <li>✓ Kalkylator (för Delprov C & D)</li>
                             <li>✓ Formelblad (du får det i provet)</li>
                             <li>✓ Vatten</li>
-                            <li>✓ Något att ätna (energi!)</li>
+                            <li>✓ Något att äta (energi!)</li>
                         </ul>
                     </div>
                 </div>
@@ -1295,7 +1445,7 @@
                         <ul style="margin-left: 20px;">
                             <li>Delprov B: 50 minuter, NO miniräknare, formelblad</li>
                             <li>Delprov C: 50 minuter med rast, miniräknare tillåtet</li>
-                            <li>Focus på noggrannhet över hastighet</li>
+                            <li>Fokusera på noggrannhet före hastighet</li>
                         </ul>
                     </div>
                     <div class="tips-section" style="margin-top: 15px;">
