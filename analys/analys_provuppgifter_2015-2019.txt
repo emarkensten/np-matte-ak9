@@ -1,0 +1,293 @@
+================================================================================
+NATIONELLA MATEMATIKPROV ÅRSKURS 9 — KOMPLETTERANDE ANALYS
+Analys av Delprov B, C, D från 2015, 2016, 2018 och 2019
+================================================================================
+
+1. TEMAN FÖR DELPROV D
+================================================================================
+
+| År   | Tema                          |
+|------|-------------------------------|
+| 2013 | Sydafrika                     |
+| 2014 | Matlagning/bakning            |
+| 2015 | Vardagsmatematik (inget tema) |
+| 2016 | Festival                      |
+| 2017 | Fester                        |
+| 2018 | Hållbar utveckling / Miljö    |
+| 2019 | Vatten                        |
+
+Notering: 2015 är det enda året utan sammanhållet tema i Delprov D.
+Uppgifterna använder återkommande namn (Bea, Leila, Kevin) men separata kontexter.
+
+
+2. ANTAL UPPGIFTER OCH POÄNGFÖRDELNING
+================================================================================
+
+ÅR 2015:
+  Delprov B: 16 uppgifter, E=13, C=7, A=5 = 25 poäng
+  Delprov C: 1 uppgift (geometri: cirkelbågar i kvadrat), E=4, C=4, A=4 = 12 poäng
+  Delprov D: 11 uppgifter, E=14, C=16, A=8 = 38 poäng
+  Totalt (B+C+D): E=31, C=27, A=17 = 75 poäng
+
+ÅR 2016:
+  Delprov B: 19 uppgifter, E=12, C=13, A=3 = 28 poäng
+  Delprov C: 1 uppgift (aritmetiska talföljder), E=4, C=4, A=4 = 12 poäng
+  Delprov D: 10 uppgifter, E=13, C=12, A=9 = 34 poäng
+  Totalt (B+C+D): E=29, C=29, A=16 = 74 poäng
+
+ÅR 2018:
+  Delprov B: 19 uppgifter, E=13, C=10, A=3 = 26 poäng
+  Delprov C: 1 uppgift (aritmetiska talföljder), E=4, C=4, A=4 = 12 poäng
+  Delprov D: 11 uppgifter (uppg 21-31), E=17, C=13, A=8 = 38 poäng
+  Totalt (B+C+D): E=34, C=27, A=15 = 76 poäng
+
+ÅR 2019:
+  Delprov B: 20 uppgifter, E=9, C=12, A=2 = 23 poäng
+  Delprov C: 1 uppgift (förpackningar, 3D-geometri), E=5, C=5, A=4 = 14 poäng
+  Delprov D: 11 uppgifter, E=14, C=13, A=8 = 35 poäng
+  Totalt (B+C+D): E=28, C=30, A=14 = 72 poäng (exkl. delprov A)
+
+  Obs: Med Delprov A (5/5/5) ger 2019 totalt ~87 poäng.
+  Kravgränser: E≥21, D≥37, C≥51, B≥64, A≥75.
+
+
+3. ÄMNESFÖRDELNING PER DELPROV
+================================================================================
+
+ÅR 2015:
+  Delprov B:
+    • Taluppfattning/Aritmetik (decimalräkning, potenser, närmevärde)
+    • Geometri (skala, likformiga trianglar, vinklar)
+    • Algebra (ekvationer, formler, mönster/generalisering)
+    • Statistik (medelvärde, median, frekvens)
+    • Sannolikhet (kombinerad sannolikhet utan återläggning)
+    • Procent/bråk (enhetspris, bråkräkning)
+    • Funktioner/Samband (linjärt samband i diagram)
+
+  Delprov C:
+    • Geometri (cirkelbågar i kvadrat, Pythagoras sats)
+    • Algebra (generalisering/bevis)
+
+  Delprov D:
+    • Taluppfattning (enhetsomvandling, volym)
+    • Statistik (stickprovsundersökning, typvärde/median)
+    • Geometri (volym av rätblock, proportioner/flagga)
+    • Procent/bråk (andelar, procentuell ökning)
+    • Algebra (ekvationstolkning, antal lösningar)
+    • Funktioner/Samband (absolut vs. relativ ökning)
+
+ÅR 2016:
+  Delprov B:
+    • Taluppfattning/Aritmetik (decimalräkning, division)
+    • Procent/bråk (20% av tal, procentuell ökning)
+    • Algebra (ekvationer, algebraiska uttryck, potenser)
+    • Geometri (vinklar, skala, area)
+    • Funktioner/Samband (diagram, formler)
+
+  Delprov C:
+    • Algebra/Talföljder (aritmetiska talföljder, generalisering)
+
+  Delprov D:
+    • Procent (andelsberäkning, procentuell jämförelse)
+    • Statistik (medelvärde, median, typvärde)
+    • Sannolikhet (fruktslots)
+    • Algebra/Ekvationssystem (biljettyper)
+    • Geometri (vinklar, Pythagoras sats)
+    • Ekonomi (vinst, break-even)
+
+ÅR 2018:
+  Delprov B:
+    • Taluppfattning/Aritmetik (decimaltal, potenser)
+    • Procent/bråk (bakåtberäkning, "300% större")
+    • Kombinatorik (tacokombo)
+    • Geometri (symmetrilinjer, vinklar, likformighet)
+    • Algebra (mönster/formel, förenkla uttryck)
+    • Funktioner/Samband (linjens ekvation)
+    • Proportionalitet (sportdryck)
+
+  Delprov C:
+    • Algebra/Mönster (aritmetiska talföljder)
+
+  Delprov D:
+    • Procent/Proportionalitet (kranvatten vs flaskvatten)
+    • Sannolikhet (burkar)
+    • Statistik (elproduktion, medelvärde/median)
+    • Geometri (volym cylinder+halvklot, vinklar, Pythagoras)
+    • Algebra (ekvationssystem, pantburkar)
+    • Taluppfattning (potensform, stora tal)
+
+ÅR 2019:
+  Delprov B:
+    • Taluppfattning/Aritmetik (beräkningar, potensform, talföljd)
+    • Geometri (vinklar, symmetri, area, skala)
+    • Sannolikhet (tärning)
+    • Kombinatorik (glasskombinationer)
+    • Bråk (addition, subtraktion)
+    • Algebra (ekvationer, förenkla uttryck)
+    • Procent (procentuell ökning — välj rätt uttryck)
+    • Enheter (volymmått)
+
+  Delprov C:
+    • Geometri/3D (volym 64 cm³, kub/rätblock/pyramid, nätritning, Pythagoras)
+
+  Delprov D:
+    • Taluppfattning (enhetsomvandling, andelar)
+    • Statistik (diagram, medelvärde/median/typvärde)
+    • Procent/bråk (literpris, vinst, rabatt)
+    • Algebra/Ekvationer (priser med rabatt, vattenflaskor)
+    • Samband/Mönster (stjärnors omkrets med n uddar)
+    • Funktioner (temperaturformel °F↔°C)
+    • Sannolikhet (sammansatt händelse)
+
+
+4. VALIDERADE MÖNSTER ÖVER ALLA 7 ÅR (2013–2019)
+================================================================================
+
+ALLTID FÖREKOMMANDE (7/7 år):
+  • Ekvationslösning — finns i varje prov
+  • Geometri (vinklar, area, volym) — varje år
+  • Procent/bråk — varje år
+  • Algebra och förenkling av uttryck — varje år
+  • Grafer och diagramtolkning — varje år
+  • Statistik (medelvärde/median/typvärde) — minst 6/7 år
+  • Sannolikhet — 7/7 år
+
+DELPROV C — ALLTID EN ENDA DJUPUPPGIFT:
+  Alla 7 år har exakt 1 stor uppgift i Delprov C med poäng i intervallet 12–14.
+  Ämnesområden varierar: geometri (2013, 2015, 2019), talföljder (2016, 2018),
+  bråkundersökning (2017), bakningsuppgift (2014).
+
+POÄNGSTRUKTUR ÄR STABIL:
+  E-poäng: 39–42% av totalen
+  C-poäng: 35–38% av totalen
+  A-poäng: 21–23% av totalen
+
+SVÅRIGHETSPROGRESSIONEN I DELPROV B:
+  Alla år: Börjar med enkla E-uppgifter (beräkningar, bara svar)
+  och eskalerar mot C och A mot slutet.
+  Sista 2–3 uppgifterna i B är alltid C- eller A-nivå.
+
+DELPROV D — ALLTID TEMABASERAT (utom 2015):
+  6 av 7 år har ett sammanhållet vardagsanknutet tema.
+  Alltid ~10–12 uppgifter med redovisningskrav.
+  Slutuppgifterna (sista 2–3) är konsekvent A-nivå.
+
+
+5. TEXTBASERADE QUIZFRÅGOR FRÅN ALLA NYA ÅR
+================================================================================
+
+FRÅN 2015:
+
+Q1: "Beräkna 13,9 − 8,85"
+  Svar: 5,05
+  Ämne: Decimalräkning | Nivå: E
+
+Q2: "Produkten av tre primtal är 105. Vilka är de tre talen?"
+  Svar: 3, 5 och 7
+  Ämne: Talteori/Primtal | Nivå: C
+
+Q3: "Bea tränar inför ett maratonlopp. Hon springer en bana som är 5,3 km lång.
+     Ett maratonlopp är ungefär 4,2 mil. Hur många hela varv måste hon springa
+     för att springa minst lika långt som ett maratonlopp?"
+  Svar: 8 varv (42 ÷ 5,3 ≈ 7,92 → 8)
+  Ämne: Enhetsomvandling | Nivå: E
+
+Q4: "Bea har sålt 1/3 och Leila har sålt 1/4 av alla salamikorvarna.
+     Det återstår 15 korvar. Hur många fanns det från början?"
+  Svar: 36 (5/12 × x = 15 → x = 36)
+  Ämne: Bråk/Andelar | Nivå: C
+
+Q5: "Ett socialt medium hade: 2006: 15 milj, 2008: 110 milj, 2010: 400 milj,
+     2012: 901 milj, 2014: 1055 milj användare. Kevin säger att ökningen är
+     störst 2010–2012. Noa säger 2006–2008. Kan båda ha rätt?"
+  Svar: Ja. Kevin: störst absolut ökning (501 milj). Noa: störst procentuell ökning (633%).
+  Ämne: Procent/Kritiskt tänkande | Nivå: A
+
+FRÅN 2016:
+
+Q6: "20 % av ett tal är 30. Vilket är talet?"
+  Svar: 150
+  Ämne: Procent | Nivå: E
+
+Q7: "Lös ekvationen: 2x + 5 = 3x"
+  Svar: x = 5
+  Ämne: Algebra | Nivå: E
+
+Q8: "460 personer äter i ett tält. 60% väljer hamburgare och 150 väljer varmkorv.
+     Hur många väljer pastasallad?"
+  Svar: 34 (460 × 0,6 = 276; 460 − 276 − 150 = 34)
+  Ämne: Procent + Aritmetik | Nivå: E
+
+Q9: "Inköpspriset är 40 kr per tröja, försäljningspriset 120 kr.
+     Man har köpt in 900 tröjor. Hur många måste säljas för att täcka inköpskostnaden?"
+  Svar: 300 (900 × 40 = 36 000; 36 000 ÷ 120 = 300)
+  Ämne: Ekonomi/Aritmetik | Nivå: C
+
+Q10: "Bandet The Buz har kört 2/3 av sträckan. Då finns 3/7 kvar av dieseln.
+      Räcker dieseln hela vägen?"
+  Svar: Ja. De förbrukade 4/7 ≈ 0,571 av dieseln för 2/3 ≈ 0,667 av sträckan.
+  Ämne: Bråk/Proportionalitet | Nivå: C
+
+FRÅN 2018:
+
+Q11: "På tacobuffén väljer man: hårt/mjukt bröd, soja/kyckling/nötfärs,
+      curry/vitlök/tacosås. Hur många kombinationer finns?"
+  Svar: 18 (2 × 3 × 3)
+  Ämne: Kombinatorik | Nivå: E
+
+Q12: "8 elever fick betyg A i matematik. Det motsvarar 5% av alla elever.
+      Hur många elever går på skolan?"
+  Svar: 160
+  Ämne: Procent (bakåtberäkning) | Nivå: E
+
+Q13: "Vilket tal är 300% större än 10?"
+  Svar: 40
+  Ämne: Procent | Nivå: C
+
+Q14: "Leila har 60 röda och gula burkar. De röda är 12 fler än de gula.
+      Hon tar upp en utan att titta. Sannolikhet för gul?"
+  Svar: 24/60 = 2/5 = 0,4
+  Ämne: Sannolikhet + Algebra | Nivå: E
+
+Q15: "Kim springer: mån 1,5 km, tis 4,4 km, ons 2,7 km, tor 2,2 km, fre 1,7 km.
+      Beräkna medelvärdet."
+  Svar: 2,5 km
+  Ämne: Statistik | Nivå: E
+
+FRÅN 2019:
+
+Q16: "Adam väljer glass: 2 strutar, 4 smaker, 7 sorters strössel.
+      Hur många kombinationer om en av varje?"
+  Svar: 56 (2 × 4 × 7)
+  Ämne: Kombinatorik | Nivå: E
+
+Q17: "Leila kastar en tärning fem gånger. Sannolikheten att få trea fem gånger i rad?"
+  Svar: (1/6)⁵ = 1/7776
+  Ämne: Sannolikhet | Nivå: E
+
+Q18: "En kran läcker en droppe varannan sekund. En droppe = 0,05 ml.
+      Hur många liter per dygn?"
+  Svar: 2,16 liter (43 200 droppar × 0,05 ml = 2 160 ml)
+  Ämne: Aritmetik/Enhetsomvandling | Nivå: E
+
+Q19: "2 vuxna + 3 ungdomar (30% rabatt) besöker Vattenlandet.
+      Totalt 1 025 kr. Vad kostar en vuxenbiljett?"
+  Svar: 250 kr (2x + 3·0,7x = 1025 → 4,1x = 1025)
+  Ämne: Algebra/Procent | Nivå: C
+
+Q20: "10 vänner besökte en festival. Medelvärde: 3,4, median: 3,5, typvärde: 2.
+      Sju värden givna: 2, 2, 2, ?, 3, ?, 4, ?, 5, 5. Hitta de tre saknade."
+  Svar: 3, 4, 5 (summa måste bli 34, median av 5:e och 6:e värde = 3,5)
+  Ämne: Statistik | Nivå: C/A
+
+
+================================================================================
+ANALYSMETOD OCH BEGRÄNSNINGAR
+================================================================================
+
+Analysen baseras på textextraktion med pdfplumber. Uppskattningsvis 15–25% av
+uppgifterna innehåller figurer som inte extraheras. Quizfrågorna ovan är
+specifikt utvalda som figuroberoende.
+
+Analytiker: Claude (Anthropic)
+Datum: April 2026

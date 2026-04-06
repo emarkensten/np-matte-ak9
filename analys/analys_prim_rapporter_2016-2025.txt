@@ -1,0 +1,359 @@
+OMFATTANDE ANALYS AV NATIONELLA PROVET I MATEMATIK ÅRSKURS 9
+2016-2025
+PRIM-gruppen, Stockholms universitet
+
+===============================================================
+
+1. PROVETS STRUKTUR
+
+Över perioden 2016-2025 har provstrukturen varit stabil och väl etablerad:
+
+Delprov-sammansättning:
+- Ett muntligt delprov (Delprov A) som genomförs i grupper om 3-4 elever
+- Tre skriftliga delprov (Delprov B, C och D) genomförda på bestämda provdagar under vårterminen
+- Det muntliga delprovet genomfördes ursprungligen under hösterminen men tidpunkten varierades
+
+Karakteristiska drag för varje delprov:
+- Delprov A: Muntligt delprov med både enskilda och gemensamma diskussionsuppgifter
+- Delprov B: Kortsvar och uppgifter med redovisningskrav, utan miniräknare/formelblad (ca 25-30% av totala poängen)
+- Delprov C: Omfattande problemlösningsuppgift av undersökande karaktär (ca 15% av totala poängen)
+- Delprov D: Redovisningsuppgifter ofta samlade kring tema, med tillåtet digitala verktyg och formelblad (ca 40% av totala poängen)
+
+Antal uppgifter och uppgiftstyper:
+- Delprov A: Muntliga uppgifter (antal varierar, ofta 1-2 komplexa uppgifter)
+- Delprov B: Cirka 15-20 uppgifter (övervägande kortsvar på E-nivå, vissa C-nivå)
+- Delprov C: 1 omfattande problemlösningsuppgift med deluppgifter
+- Delprov D: Cirka 6-10 större redovisningsuppgifter
+
+Totalpoäng per år:
+- 2016: 90 poäng (35 E, 34 C, 21 A)
+- 2017: 91 poäng (38 E, 32 C, 21 A)
+- 2018: 91 poäng (38 E, 32 C, 21 A)
+- 2019: 90 poäng (37 E, 34 C, 19 A)
+- 2024: 88 poäng (poäng ej längre kategoriserade E/C/A)
+- 2025: 89 poäng (poäng ej längre kategoriserade E/C/A)
+
+Förändring 2024/2025: En viktig förändring introducerades när poängen inte längre kategoriserades efter nivå (E/C/A). Detta förändrade bedömningen betydligt och väckte diskussion bland lärare.
+
+Provtid (rekommenderad):
+- Delprov A: Ca 30 minuter (muntlig diskussion)
+- Delprov B: Ca 60 minuter (senare ändrat till två gånger 50 minuter med rast)
+- Delprov C: Ca 60 minuter (senare ändrat till 50 minuter)
+- Delprov D: Ca 120 minuter
+
+En återkommande utmaning genom åren har varit provtidernas tillräcklighet, särskilt för Delprov D och senare även för Delprov A.
+
+===============================================================
+
+2. ÄMNESOMRÅDEN OCH DERAS FÖRDELNING
+
+Det centrala innehållet har varit genomgripande och konsistent över åren, med följande typiska fördelning:
+
+Taluppfattning och tals användning:
+- 40-50% av uppgifterna (2016: ca 50%, 2017-2018: ca 40%, 2019: inkluderat)
+- Omfattar: addition, subtraktion, multiplikation, division av olika taltyper (heltal, decimaler, bråk)
+- Särskilt fokus på decimal- och bråkräkning
+
+Algebra:
+- Ca 25-30% av uppgifterna
+- Innehål: Ekvationslösning, algebraiska uttryck, förenkling av uttryck, andragradsekvationer
+- Återkommande svårighet: Elever löser ofta endast en rot vid andragradsekvationer, inte båda
+
+Geometri:
+- Ca 20-30% av uppgifterna
+- Innehål: Area, omkrets, volym, vinklar, koordinatsystem, tredimensionella figurer
+- Ökad fokusering på tredimensionell geometri och mindre konventionella diagram
+
+Statistik och sannolikhet:
+- Ca 10% av uppgifterna
+- Innehål: Diagramtolkning, sannolikhet, grundläggande statistik
+- Relativt stabilt område genom åren
+
+Samband och förändring (Funktioner):
+- Ca 20-25% av uppgifterna
+- Innehål: Proportionalitet, samband mellan variabler, grafer, linjära samband
+- Ofta integrerat med andra områden
+
+Problemlösning:
+- Ca 30-40% av uppgifterna
+- Distribuerat över alla områden, inte separat utan som en förmåga att tillämpa
+
+Tema i delproven:
+- 2016: Festival
+- 2017: Fester
+- 2018: Hållbar utveckling
+- 2019: Vatten
+- 2024-2025: Variabel tematisering
+
+Fördelningen har varit relativt stabil, med konsistent vikt på taluppfattning och problemlösning. Geometri har ökat något i senare år.
+
+===============================================================
+
+3. FÖRMÅGOR SOM TESTAS
+
+De fem matematiska förmågorna enligt Lgr 11 testas konsekvent:
+
+Begrepp (begreppsförmåga):
+- 2016: 29% av poängen
+- 2017: 33% av poängen
+- 2018: 19% av poängen
+- 2019: inkluderat (omfattande)
+- 2024-2025: En av flera förmågor per uppgift
+
+Fokus: Förståelse för matematiska begrepp, definitioner och relationer mellan begrepp.
+
+Metod (metodförmåga):
+- 2016: 21% av poängen
+- 2017: 20% av poängen
+- 2018: 30% av poängen
+- 2019: Betydande vikt
+- Särskilt fokus i Delprov B (utan digitala verktyg)
+
+Fokus: Algoritmer, procedurer, beräkningsteknik, problemlösningsmetoder.
+
+Problemlösning:
+- 2016: 23% av poängen
+- 2017: 24% av poängen
+- 2018: 21% av poängen
+- Särskilt fokus i Delprov C och D
+
+Fokus: Formulering av problem, strategier, analytiskt tänkande.
+
+Resonemang (resonemangsförmåga):
+- 2016: 13% av poängen
+- 2017: 12% av poängen
+- 2018: 14% av poängen
+- Integrat i alla delprov
+
+Fokus: Logiska argument, motiveringar, verifikation av resultat.
+
+Kommunikation:
+- 2016: 13% av poängen
+- 2017: 11% av poängen
+- 2018: 16% av poängen
+- Särskilt viktig i Delprov C och D (redovisningsuppgifter)
+
+Fokus: Matematisk språk, presentationkvalitet, klarhet i utredning.
+
+Förändring 2024/2025: Från 2023/2024 redovisas inte längre bara "huvudsaklig förmåga" utan en eller flera förmågor som poängen kan relatera till. Detta enligt lärare ofta bättre motsvarar verkligheten men väckte också kritik.
+
+Förmågorna är integrerade och överlappande. Eleverna kan visa fler förmågor än den huvudsakliga som bedöms.
+
+===============================================================
+
+4. SVÅRIGHETSGRAD OCH RESULTAT
+
+Elevprestationer (lösningsproportioner):
+
+Vanligast: Enkla uppgifter på E-nivå med en förmåga och 1-2 steg (0,70-0,90 lösningsproportion)
+Svårast: A-nivåuppgifter med multipla förmågor och komplexa steg (0,10-0,30 lösningsproportion)
+
+Specifika utmaningar identifierade genom åren:
+
+Decimalarimetik:
+- Additions/subtraktionsfel vid olika antal decimaler
+- Enhetsbytefel vid division med decimaltal (ofta factor 10, 100 eller 1000 fel)
+
+Algebra/Ekvationslösning:
+- Andragradsekvationer: Elever löser ofta bara den positiva roten, inte båda
+- Många gör fel när de dividerar med 2 istället för att ta roten ur i sista steget
+- Algebraisk förenkling ofta okomplett
+
+Geometri:
+- Tredimensionella figurer och illustrationer upplevdes särskilt svåra 2024-2025
+- Area vs omkrets förväxling
+- Enhetsbyten (mil-kilometer, inch-millimeter-meter)
+
+Sannolikhet och statistik:
+- Sannolikhetsuppgifter hade ofta låg lösningsproportion
+- Diagramtolkning kräver språklig förståelse som varierar
+
+Provbetyg fördelning över åren:
+
+2016:
+- F: 8,2%, E: 29,8%, D: 25,4%, C: 21,1%, B: 9,9%, A: 5,6%
+
+2017:
+- F: 18,0%, E: 35,0%, D: 14,3%, C: 15,2%, B: 9,5%, A: 8,1%
+
+2018: (påverkat av provläcka)
+- F: 14,6%, E: 34,9%, D: 19,9%, C: 19,2%, B: 7,4%, A: 3,9%
+
+2019:
+- F: 17,4%, E: 33,6%, D: 21,0%, C: 13,5%, B: 9,5%, A: 5,1%
+
+2024:
+- F: 15%, E: 25%, D: 24%, C: 16%, B: 13%, A: 7%
+
+2025:
+- F: 16%, E: 30%, D: 21%, C: 13%, B: 11%, A: 9%
+
+Andelen elever med godkänt betyg (E eller högre): 85-92% över perioden
+Variation förklaras delvis av provets svårighetsgrad och provsituationen (2018 påverkades av läcka)
+
+Könsskillnader:
+- Mycket små eller obefintliga skillnader mellan pojkar och flickor (oftast < 2 procentenheter)
+- Vissa år något högre andel flickor med högre betyg, men mönstret varierar
+
+Språkgrupp:
+- Elever med annat modersmål än svenska får provbetyget F i betydligt högre utsträckning (26-32% jämfört med 11-14% för svensktalande)
+- Detta är konsekvent över alla år i studien
+
+Högprestörer:
+- Få elever når provbetyget A (5-9%)
+- Ännu färre löser de svåraste uppgifterna helt korrekt
+
+===============================================================
+
+5. KRAVGRÄNSER (BETYGSGRÄNSER)
+
+Totalpoäng för olika provbetyg (två första år, då E/C/A-poäng användes):
+
+2016:
+- E: Minst 22 poäng (samtliga 90 poäng möjliga)
+- D: Minst 36 poäng
+- C: Minst 48 poäng
+- B: Minst 63 poäng
+- A: Minst 73 poäng
+- Nivåkrav: E: 10 C-poäng, D: 19 C-poäng, B: 6 A-poäng, A: 11 A-poäng
+
+2017:
+- E: Minst 22 poäng (av 91 totala)
+- D: Minst 38 poäng
+- C: Minst 50 poäng
+- B: Minst 64 poäng
+- A: Minst 74 poäng
+- Nivåkrav: E: 11 C-poäng, D: 19 C-poäng, B: 7 A-poäng, A: 12 A-poäng
+
+2018:
+- E: Minst 22 poäng (av 91 totala)
+- D: Minst 37 poäng
+- C: Minst 50 poäng
+- B: Minst 65 poäng
+- A: Minst 75 poäng
+- Nivåkrav: E: 10 C-poäng, D: 18 C-poäng, B: 6 A-poäng, A: 11 A-poäng
+
+2019:
+- E: Minst 21 poäng (av 90 totala)
+- D: Minst 37 poäng
+- C: Minst 51 poäng
+- B: Minst 64 poäng
+- A: Minst 75 poäng
+- Nivåkrav: E: 10 C-poäng, D: 19 C-poäng, B: 5 A-poäng, A: 10 A-poäng
+
+2024 (nytt system utan E/C/A-kategorisering):
+- E: Minst 21 poäng (av 88 totala)
+- D: Minst 35 poäng
+- C: Minst 49 poäng
+- B: Minst 61 poäng
+- A: Minst 73 poäng
+
+2025:
+- E: Minst 22 poäng (av 89 totala)
+- D: Minst 36 poäng
+- C: Minst 50 poäng
+- B: Minst 62 poäng
+- A: Minst 74 poäng
+
+Lärares uppfattning om kravgränser:
+- Generell konsensus: 78-94% av lärarna anser kravgränserna lämpliga (varierar per år och provbetyg)
+- 2024-2025: Omfattande kritik från lärare att E-gränsen är för låg (20% ansåg den för låg 2025)
+- Lärarkommentarer ofta: "Provbetyget stämmer väl överens med min preliminära bedömning"
+
+Övergreppseffekt:
+- Ungefär 20% av eleverna når totalpoängskrav men inte nivåpoängskrav (eller omvänt)
+- Detta var särskilt tydligt i tidigare år med E/C/A-kategorisering
+
+===============================================================
+
+6. LÄRARNAS SYNPUNKTER
+
+Enkätdeltagande:
+- 2016: Cirka 1800 lärarenkäter
+- 2017: Cirka 1200 lärarenkäter
+- 2018: Cirka 270 lärarenkäter (påverkat av provläcka)
+- 2019: Cirka 1200 lärarenkäter
+- 2024: Cirka 1300 lärarenkäter
+- 2025: Cirka 1100 lärarenkäter
+
+Lärarinformation och genomförande:
+- 96-99% av lärarna anser att lärarinformationen är tillräcklig
+- Cirka 80-90% av lärarna anpassar provet för någon eller några elever (längre tid, uppläsning, vuxenstöd)
+- Anpassningen är särskilt viktig för elever med läs- och skrivsvårigheter och elever med annat modersmål
+
+Provtid:
+Återkommande kritik genom alla år:
+- 78-92% anser tiden tillräcklig för Delprov B
+- 57-83% anser tiden tillräcklig för Delprov D (detta är den mest kritiserade delen)
+- Från 2020 förlängdes Delprov B och C till 50 minuter vardera med rast
+- 2024-2025: Kritik att Delprov A (30 min) är för kort för att alla elever ska få tala
+
+Bedömningsanvisningar:
+- 86-96% av lärarna anser bedömningsanvisningarna är tillräckliga
+- Önskemål om fler elevexempel, särskilt för felaktiga svar
+- Kritik 2019: Saknade exempel på elevlösningar som inte är godkända
+- 2024-2025: Kritik på längden av lärarinformation (två häften)
+
+Provets svårighetsgrad:
+- 70-96% anser svårighetsgraden lämplig för respektive delprov
+- Delprov B ofta ansett något svårare än övriga (29-60% tycker det är för svårt, beroende på år)
+- Delprov D ibland ansett svårt (43% 2017)
+- 2024: Delprov C ansett klurigare på grund av ovanlig struktur och illustration
+
+Lärarkommentarer om innehål (urval):
+- Positivt: "Goda bredd och variation på uppgifterna", "Väl skrivna frågor", "Verklighetsförankrade", "Tar upp alla områden på ett adekvat sätt"
+- Kritik: "För många svåra uppgifter för svagpresterande elever", "För få enkla uppgifter i början", "Språkligt utmanande för nyanlända"
+- 2024-2025: Stark kritik på förändringen att poäng inte längre kategoriseras E/C/A
+
+Sambedömning:
+- Delprov C och D: Oftast sambedömas (många lärare gör detta)
+- Delprov B: Cirka 30% av lärarna gör detta själva
+- Muntliga delen: Oftast bedöms helt ensamt av respektive lärare (40-50%)
+
+Stöd för betygssättning:
+- 75-92% av lärarna anser provet är ett stöd för betygssättning (högre i senare år)
+- Många använder provet som "kvitto" på att de undervisat enligt kursplanen
+- Viktigt för osäkra eller nya lärare
+- Kan jämföra med nationell nivå
+
+Överensstämmelse mellan provbetyg och slutbetyg:
+- Cirka 50-70% av eleverna får samma slutbetyg som provbetyg
+- 20-40% får högre slutbetyg än provbetyget
+- Resten får lägre slutbetyg
+
+Lärarkommentarer om framtida förbättringar:
+- Förlängd tid för Delprov D (fler gånger nämnt)
+- Tidigare provdatum för att kunna analysera resultaten
+- Fler enkla "uppvärmningsuppgifter" för svagare elever
+- Återgång till E/C/A-kategorisering av poäng (2024-2025)
+- Kortare och förenklare lärarinformation (2024-2025)
+- Fler språkversioner, bättre stöd för nyanlända
+- Möjlighet att mer användande uppgifterna i daglig undervisning
+
+Övergripande: Lärarna uppskattar provets struktur och anser det är ett värdefullt redskap, men önskemål om mindre tidspress och bättre möjligheter för alla elevgrupper att visa sina kunskaper.
+
+===============================================================
+
+SAMMANFATTANDE OBSERVATIONER
+
+Stabilitet och Förändring:
+Provstrukturen har varit mycket stabil över 10-årsperioden, vilket lärare uppskattar. Den större förändringen 2024/2025 (avlägsnande av E/C/A-nivåkategorisering) väckte betydande diskussion och kritik.
+
+Konsekvent Utmaning:
+Samma områden är svåra år efter år: andragradsekvationer, enhetsbyten, tredimensionell geometri, och komplext språk i problemformuleringen.
+
+Jämlik Bedömning:
+Provet fungerar väl för att differentiera mellan elever, men det finns märkbar gap mellan elevgrupper (särskilt för elever med annat modersmål). Detta är en återkommande problematik.
+
+Tidsbegränsning:
+Provtiden är en beständig spänningspunkt. Balansen mellan att ge elever tid och behålla tillräckligt många uppgifter för reliabilitet är svår.
+
+Lärarnas Roll:
+Lärarna spelar en central roll i anpassning och bedömning. Variationen i hur provets genomförandet och bedömningen hanteras visar betydelsen av gemensam förståelse och sambedömning.
+
+Utveckling över tid:
+2016-2019: Fokus på strukturförbättring, timallokering och nivåkravens utformning
+2018: En provläcka påverkade datainsamlingen
+2024-2025: Systemförändring till föräldelseloös poängsystem väckte diskussioner om betygskriteriernas konkretisering
+
+===============================================================
