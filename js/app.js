@@ -31,11 +31,14 @@ function toggleTheme() {
 
 // === TABS ===
 function switchTab(tabId, btn) {
-  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.tab-button').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
+  document.querySelectorAll('.tab-content').forEach(function(t) { t.classList.remove('active'); });
+  document.querySelectorAll('.tab-button').forEach(function(b) { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); b.setAttribute('tabindex', '-1'); });
   document.getElementById(tabId).classList.add('active');
   btn.classList.add('active');
   btn.setAttribute('aria-selected', 'true');
+  btn.setAttribute('tabindex', '0');
+  var panel = document.getElementById(tabId);
+  panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 // === COUNTDOWN ===
@@ -55,7 +58,7 @@ const SESSIONS = [
   { id: 5, title: 'E-quiz blandat', time: '40 min', desc: 'Alla E-frågor, alla ämnen — quiz-läge', filter: { level: 'E' } },
   { id: 6, title: 'C-nivå: procent & algebra', time: '40 min', desc: 'C-frågor + redovisning', filter: { level: 'C' } },
   { id: 7, title: 'Redovisningsguiden', time: '40 min', desc: 'Läs "Redovisning"-fliken på djupet', view: 'view-redovisning' },
-  { id: 8, title: 'Delprov C-walkthrough', time: '45 min', desc: 'Guidad genomgång av en undersökningsuppgift', filter: { delprov: 'C' } },
+  { id: 8, title: 'Delprov C-walkthrough', time: '45 min', desc: 'Guidad genomgång av en undersökningsuppgift', view: 'view-exam' },
   { id: 9, title: 'Delprov D-övning', time: '40 min', desc: 'Riktiga D-uppgifter med redovisning', filter: { delprov: 'D', level: 'E' } },
   { id: 10, title: 'Vanliga fällor + blandad quiz', time: '30 min', desc: 'Läs fällorna i Provdagen + quiz', view: 'view-exam' },
   { id: 11, title: 'Kvällen innan B+C', time: '20 min', desc: 'Mental förberedelse + snabbquiz', view: 'view-exam' },
@@ -104,7 +107,7 @@ function renderStudyPlan() {
   // Exam days
   parts.push('<div class="session-card exam-day">' +
     '<div class="session-number" style="background:#f59e0b;">!</div>' +
-    '<div class="session-info"><div class="session-title">DELPROV B + C</div><div class="session-meta">S\u00F6n 11 maj</div></div></div>');
+    '<div class="session-info"><div class="session-title">DELPROV B + C</div><div class="session-meta">M\u00E5n 11 maj</div></div></div>');
   parts.push('<div class="session-card">' +
     '<div class="session-number">12</div>' +
     '<div class="session-info"><div class="session-title">Kv\u00E4llen innan D \u2014 Redovisningsfokus</div><div class="session-meta">20 min \u2014 M\u00E5n 12 maj</div></div></div>');
@@ -131,7 +134,7 @@ const TRAPS = [
   '13,9 \u2212 8,85 = ? Skriv 13,90 \u2212 8,85 f\u00F6r att undvika decimalfel. Svar: 5,05.',
   '"300% st\u00F6rre \u00E4n 10" = 40, inte 30. 300% AV 10 = 30. 300% ST\u00D6RRE = 10 + 30.',
   'Gl\u00F6m inte enheter! "12" utan "cm\u00B2" kan ge 0 po\u00E4ng.',
-  '4,2 mil = 42 km, inte 4,2 km. Kolla enhetsomnandlingar noga.',
+  '4,2 mil = 42 km, inte 4,2 km. Kolla enhetsomvandlingar noga.',
   'Medianv\u00E4rde: ordna talen i storleksordning f\u00F6rst! Medianen av 5 tal = det 3:e talet.',
   'Ekvation: g\u00F6r SAMMA sak p\u00E5 b\u00E5da sidor. Subtrahera 5? G\u00F6r det \u00F6verallt.',
   'Sannolikhet: P = gynnsamma / m\u00F6jliga. Gl\u00F6m inte att r\u00E4kna ALLA m\u00F6jliga utfall.',
