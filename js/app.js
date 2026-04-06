@@ -203,11 +203,21 @@ function startTodaySession() {
 // === FILTERS ===
 function setFilter(type, value, btn) {
   currentFilters[type] = value;
+  // Find the right filter group and sync chip highlights
+  var groups = document.querySelectorAll('#filterBar .filter-group');
+  var groupIdx = type === 'level' ? 0 : 1;
   if (btn) {
     var group = btn.parentElement;
     var chips = group.querySelectorAll('.filter-chip');
     for (var i = 0; i < chips.length; i++) chips[i].classList.remove('active');
     btn.classList.add('active');
+  } else if (groups[groupIdx]) {
+    var chips = groups[groupIdx].querySelectorAll('.filter-chip');
+    for (var i = 0; i < chips.length; i++) {
+      chips[i].classList.remove('active');
+      var chipValue = chips[i].textContent === 'Alla' ? 'all' : chips[i].textContent;
+      if (chipValue === value) chips[i].classList.add('active');
+    }
   }
   renderPractice();
 }

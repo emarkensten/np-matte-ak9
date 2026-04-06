@@ -15,7 +15,7 @@
   <div class="container">
     <header>
       <h1>NP Matte Åk 9</h1>
-      <p>Riktiga provfrågor &middot; Smart studieplan &middot; Maximal effekt</p>
+      <p>Träna på riktiga provfrågor &middot; Vet exakt vad som kommer</p>
       <div class="countdown" id="countdown"></div>
       <div class="header-controls">
         <button class="theme-toggle" onclick="toggleTheme()" aria-label="Växla mörkt/ljust läge">Mörkt</button>
@@ -34,7 +34,7 @@
     <div id="view-today" class="tab-content active" role="tabpanel">
       <div class="confidence-boost">
         <div class="big-number">22 av ~90 poäng</div>
-        <p>Det är allt som behövs för godkänt (E). Och de första 22 poängen är de lättaste.</p>
+        <p>Så lite behövs för godkänt (E). De första 22 poängen är typ de enklaste på hela provet.</p>
       </div>
 
       <div class="dashboard-grid">
@@ -60,7 +60,7 @@
       </div>
 
       <div class="card">
-        <h3>Snabbfakta om provet</h3>
+        <h3>Det här behöver du veta</h3>
         <ul style="margin-left: 20px; line-height: 2;">
           <li><strong>Delprov B + C:</strong> 80 min ihop, utan miniräknare (B), med miniräknare (C)</li>
           <li><strong>Delprov D:</strong> 100 min, med miniräknare, redovisning krävs</li>
@@ -74,7 +74,7 @@
     <div id="view-practice" class="tab-content" role="tabpanel">
       <div class="card">
         <h2>Övning</h2>
-        <p>Riktiga frågor från nationella prov 2013–2019. Filtrera efter svårighetsgrad, ämne eller delprov.</p>
+        <p>Frågor tagna direkt från riktiga NP 2013–2019. Filtrera så du tränar på rätt grejer.</p>
       </div>
 
       <div class="filter-bar" id="filterBar">
@@ -122,12 +122,12 @@
     <div id="view-redovisning" class="tab-content" role="tabpanel">
       <div class="card">
         <h2>Redovisningsguide</h2>
-        <p>Det här är skillnaden mellan E och C. Rätt svar utan redovisning = E. Rätt svar med redovisning = C.</p>
+        <p>Här är grejen: rätt svar utan att visa hur du tänkte = E. Samma svar men med stegen utskrivna = C. Läs det här så vet du exakt vad lärarna letar efter.</p>
       </div>
 
       <div class="card">
         <h3>3-stegs-hacket</h3>
-        <p>Gör alltid dessa tre steg i Delprov D:</p>
+        <p>Det här är det enklaste sättet att höja ditt betyg. Gör alltid dessa tre steg i Delprov D:</p>
         <ol style="margin: 16px 0 0 20px; line-height: 2.2;">
           <li><strong>Skriv formeln/metoden</strong> — "Jag använder formeln V = π·r²·h"</li>
           <li><strong>Visa varje beräkningssteg</strong> — substitution → beräkning → resultat</li>
@@ -286,7 +286,7 @@ Kontroll: 276 + 150 + 34 = 460 ✓</div>
     <div id="view-plan" class="tab-content" role="tabpanel">
       <div class="card">
         <h2>Studieplan</h2>
-        <p>11 pass som anpassar sig efter hur många dagar du har kvar. Prioriterat efter vad som ger flest poäng.</p>
+        <p>Passen anpassar sig efter hur många dagar du har kvar. Sorterade efter vad som ger mest poäng med minst plugg.</p>
       </div>
       <div id="planContainer"></div>
     </div>
@@ -295,7 +295,7 @@ Kontroll: 276 + 150 + 34 = 460 ✓</div>
     <div id="view-exam" class="tab-content" role="tabpanel">
       <div class="card">
         <h2>Provdagen</h2>
-        <p>Allt du behöver veta innan och under provet.</p>
+        <p>Hur du ska tänka under provet. Läs det här kvällen innan.</p>
       </div>
 
       <div class="card">
@@ -370,6 +370,66 @@ Kontroll: 276 + 150 + 34 = 460 ✓</div>
       </div>
 
       <div class="card">
+        <h3>Delprov C — övningsuppgift</h3>
+        <p style="margin-bottom:12px;">Här är en riktig Delprov C-uppgift. Testa att lösa den själv innan du tittar på lösningen.</p>
+
+        <div class="question-card level-c" style="border-left-width:4px;">
+          <div>
+            <span class="level-badge badge-c">Delprov C</span>
+            <span class="badge-topic">12 poäng (4E + 4C + 4A)</span>
+            <span class="badge-source">NP 2016</span>
+          </div>
+          <p class="question-text"><strong>Aritmetiska talföljder</strong><br><br>
+          En aritmetisk talföljd är en talföljd där skillnaden mellan två tal som kommer efter varandra alltid är lika stor.<br><br>
+          Exempel: 3, 7, 11, 15, 19, ... (skillnaden är alltid 4)<br><br>
+          <strong>Uppgift I</strong><br>
+          a) Skriv en aritmetisk talföljd som börjar med 1 och där skillnaden är 3.<br>
+          b) Beräkna summan av de fem första talen i din talföljd.<br>
+          c) Skriv ytterligare en aritmetisk talföljd som börjar med 1 och som har samma summa av de fem första talen. Visa att summan stämmer.<br><br>
+          <strong>Uppgift II</strong><br>
+          a) Undersök vad som händer med summan av de fem första talen i en aritmetisk talföljd som börjar med 1 när du ändrar skillnaden.<br>
+          b) Kan du hitta ett samband?<br>
+          c) Visa algebraiskt att sambandet gäller.</p>
+
+          <button class="reveal-btn" onclick="revealAnswer('delprov_c_example')">Visa lösning steg för steg</button>
+          <div class="hidden-answer" id="answer-delprov_c_example">
+            <h4>Steg-för-steg lösning</h4>
+
+            <p><strong>Uppgift I a) — E-poäng</strong><br>
+            Talföljd med start 1, skillnad 3: <strong>1, 4, 7, 10, 13</strong></p>
+
+            <p><strong>Uppgift I b) — E-poäng</strong><br>
+            Summa = 1 + 4 + 7 + 10 + 13 = <strong>35</strong></p>
+
+            <p><strong>Uppgift I c) — C-poäng</strong><br>
+            En annan talföljd med start 1 och summa 35. Prova skillnad 6: 1, 7, 13, 19, 25. Summa = 1+7+13+19+25 = 65. Nej.<br>
+            Prova skillnad 2: 1, 3, 5, 7, 9. Summa = 25. Nej.<br>
+            Insikt: Summan beror på skillnaden! Med skillnad d: summan av 5 tal = 5·1 + (0+1+2+3+4)·d = 5 + 10d.<br>
+            För summa 35: 5 + 10d = 35, d = 3. Det finns alltså <strong>bara en</strong> talföljd med start 1 och summa 35 bland 5 tal.</p>
+
+            <p><strong>Uppgift II a+b) — C-poäng</strong><br>
+            Undersökning: prova olika skillnader (d):<br>
+            d=1: 1+2+3+4+5 = 15<br>
+            d=2: 1+3+5+7+9 = 25<br>
+            d=3: 1+4+7+10+13 = 35<br>
+            d=4: 1+5+9+13+17 = 45<br>
+            <strong>Samband: Summan = 5 + 10d</strong> (eller: summan ökar med 10 för varje ökning av d med 1)</p>
+
+            <p><strong>Uppgift II c) — A-poäng</strong><br>
+            De fem talen är: 1, 1+d, 1+2d, 1+3d, 1+4d.<br>
+            Summa = 5·1 + (0+1+2+3+4)·d = 5 + 10d. ∎</p>
+
+            <div class="level-tip" style="margin-top:16px;">
+              <strong>Så fick du poängen:</strong><br>
+              E: Skriv talföljden och räkna summan (4 poäng bara genom att göra grunduppgiften)<br>
+              C: Undersök systematiskt och hitta sambandet — skriv "Jag ser att summan ökar med 10..." (4 poäng)<br>
+              A: Visa algebraiskt med variabeln d — "De fem talen är 1, 1+d, 1+2d..." (4 poäng)
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
         <h3>Betygsgränser</h3>
         <p style="margin-bottom: 12px;">Baserat på 2016–2025 (alla år har liknande gränser):</p>
         <table class="grade-table">
@@ -411,8 +471,8 @@ Kontroll: 276 + 150 + 34 = 460 ✓</div>
       </div>
 
       <div class="confidence-boost" style="margin-top: 16px;">
-        <p style="font-size: 1.1em; font-weight: 600;">Du klarar det här.</p>
-        <p>Du har tränat på riktiga NP-frågor. Du vet hur provet ser ut. Du vet vad bedömarna letar efter. Det räcker långt.</p>
+        <p style="font-size: 1.1em; font-weight: 600;">Du fixar det här, Malte.</p>
+        <p>Du har sett riktiga provfrågor. Du vet hur provet funkar. Du vet vad som ger poäng. Det är mer förberett än de flesta i din klass.</p>
       </div>
     </div>
   </div>
