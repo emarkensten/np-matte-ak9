@@ -5,7 +5,7 @@
 
 // === STATE ===
 const EXAM_DATE = new Date(2026, 4, 11); // 11 maj 2026
-const EXAM_DATE_D = new Date(2026, 4, 13); // 13 maj 2026
+// Delprov D: 13 maj 2026
 let currentFilters = { level: 'all', delprov: 'all', topic: 'all' };
 let quizState = null; // { questions, index, scores }
 
@@ -113,7 +113,7 @@ function renderStudyPlan() {
     '<div class="session-info"><div class="session-title">Kv\u00E4llen innan D \u2014 Redovisningsfokus</div><div class="session-meta">20 min \u2014 M\u00E5n 12 maj</div></div></div>');
   parts.push('<div class="session-card exam-day">' +
     '<div class="session-number" style="background:#f59e0b;">!</div>' +
-    '<div class="session-info"><div class="session-title">DELPROV D</div><div class="session-meta">Tis 13 maj</div></div></div>');
+    '<div class="session-info"><div class="session-title">DELPROV D</div><div class="session-meta">Ons 13 maj</div></div></div>');
 
   container.innerHTML = parts.join('');
 }
